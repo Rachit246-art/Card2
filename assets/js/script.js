@@ -347,3 +347,37 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+
+// 13. Global Smooth Scroll Reveal Observer
+document.addEventListener('DOMContentLoaded', function() {
+  var revealTargets = document.querySelectorAll(
+    '.t5-sec, .t5-sh, .t5-card, .t5-plan-card, .t5-gift-container, .atelier-fullscreen-box, .t5-reels-row, .t5-how-steps, .t5-review-card'
+  );
+
+  revealTargets.forEach(function(el) {
+    el.classList.add('t5-reveal');
+  });
+
+  if ('IntersectionObserver' in window) {
+    var revealObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.08
+    });
+
+    revealTargets.forEach(function(el) {
+      revealObserver.observe(el);
+    });
+  } else {
+    revealTargets.forEach(function(el) {
+      el.classList.add('is-revealed');
+    });
+  }
+});

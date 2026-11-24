@@ -3370,3 +3370,135 @@
     transform: translateY(0);
   }
 }
+
+
+/* ==========================================================================
+   GLOBAL LUXURY ANIMATIONS & FLUID TRANSITIONS
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Transition Defaults */
+a, button, input, select, textarea {
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Scroll Reveal Animations */
+.t5-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.t5-reveal.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Staggered Grid Item Entrances */
+.t5-reveal-stagger > *:nth-child(1) { transition-delay: 0.04s; }
+.t5-reveal-stagger > *:nth-child(2) { transition-delay: 0.10s; }
+.t5-reveal-stagger > *:nth-child(3) { transition-delay: 0.16s; }
+.t5-reveal-stagger > *:nth-child(4) { transition-delay: 0.22s; }
+.t5-reveal-stagger > *:nth-child(5) { transition-delay: 0.28s; }
+.t5-reveal-stagger > *:nth-child(6) { transition-delay: 0.34s; }
+.t5-reveal-stagger > *:nth-child(7) { transition-delay: 0.40s; }
+.t5-reveal-stagger > *:nth-child(8) { transition-delay: 0.46s; }
+
+/* Wedding Invitation & Save the Date Cards Hover Elevation */
+.t5-card,
+.t5-plan-card,
+.t5-reel-card {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease !important;
+}
+
+.t5-card:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  box-shadow: 0 18px 40px rgba(89, 38, 47, 0.12) !important;
+}
+
+.t5-card:hover img {
+  transform: scale(1.03) !important;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+/* Interactive Pill Buttons & Filter Chips */
+.t5-cat-pill,
+.t5-filter-btn,
+.t5-pill {
+  transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.t5-cat-pill:hover,
+.t5-filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(81, 19, 23, 0.12);
+}
+
+.t5-cat-pill:active,
+.t5-filter-btn:active {
+  transform: scale(0.96);
+}
+
+/* Primary Action Buttons Elevation & Glow */
+.t5-btn,
+.t5-gift-cta-btn,
+.std-continue-btn {
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, background 0.2s ease !important;
+}
+
+.t5-btn:hover,
+.t5-gift-cta-btn:hover,
+.std-continue-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(81, 19, 23, 0.28);
+}
+
+.t5-btn:active,
+.t5-gift-cta-btn:active,
+.std-continue-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Marquee Pause on Hover */
+.t5-marquee:hover,
+.t5-marquee-track:hover,
+.t5-track:hover {
+  animation-play-state: paused !important;
+}
+
+/* Smooth Floating Ornaments Floating Easing */
+.t5-orn {
+  animation: t5-rise 1.2s cubic-bezier(.2,.7,.1,1) both, t5-bob 7s ease-in-out infinite alternate !important;
+  will-change: transform;
+}
+
+@keyframes t5-bob {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Respect Accessibility Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .t5-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .t5-orn {
+    animation: none !important;
+  }
+}

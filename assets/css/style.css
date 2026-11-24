@@ -574,7 +574,6 @@
 .hw-pricing-cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  divide-x: 1px solid rgba(43, 35, 32, 0.08);
 }
 .hw-pcol {
   display: flex;
@@ -2845,4 +2844,529 @@
   font-size: 11px;
   color: #8A7570;
   line-height: 1.4;
+}
+
+/* ==========================================================================
+   SAVE THE DATE CUSTOM MODAL (MATCHING REFERENCE IMAGE 2)
+   ========================================================================== */
+
+.std-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(30, 20, 22, 0.55);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.std-modal-overlay.active {
+  display: flex !important;
+  opacity: 1 !important;
+}
+
+.std-modal-box {
+  background: #FAF7F2;
+  border-radius: 20px;
+  padding: 32px 28px 28px;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  position: relative;
+  border: 1px solid rgba(89, 38, 47, 0.12);
+  transform: scale(0.95);
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-sizing: border-box;
+}
+
+.std-modal-overlay.active .std-modal-box {
+  transform: scale(1);
+}
+
+.std-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  color: #8A7570;
+  cursor: pointer;
+  padding: 6px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.std-modal-close:hover {
+  color: #511317;
+}
+
+.std-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: #59262F;
+}
+
+.std-modal-icon {
+  font-size: 16px;
+}
+
+.std-modal-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  color: #59262F;
+}
+
+.std-modal-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.std-step-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  background: #E8E2D9;
+  color: #7A6B65;
+}
+
+.std-step-num.active {
+  background: #511317;
+  color: #fff;
+}
+
+.std-step-line {
+  width: 36px;
+  height: 1.5px;
+  background: #D5CCC0;
+}
+
+.std-modal-heading {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2B2320;
+  margin: 0 0 6px;
+}
+
+.std-modal-sub {
+  font-family: Montserrat, sans-serif;
+  font-size: 11.5px;
+  color: #7A6B65;
+  line-height: 1.5;
+  margin: 0 0 4px;
+}
+
+.std-modal-note {
+  font-family: Montserrat, sans-serif;
+  font-size: 11px;
+  color: #9E8D88;
+  line-height: 1.4;
+  margin: 0 0 16px;
+}
+
+.std-selected-box {
+  background: #F4EFEB;
+  border: 1px solid rgba(89, 38, 47, 0.12);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.std-change-btn {
+  background: transparent;
+  border: 1px solid rgba(89, 38, 47, 0.25);
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-family: Montserrat, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #511317;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.std-change-btn:hover {
+  background: #511317;
+  color: #fff;
+  border-color: #511317;
+}
+
+.std-modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.std-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 14px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .std-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.std-label {
+  display: block;
+  font-family: Montserrat, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #59262F;
+  margin-bottom: 5px;
+}
+
+.std-input {
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(89, 38, 47, 0.2);
+  background: #FAF7F2;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  color: #2B2320;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.std-input:focus {
+  border-color: #511317;
+  background: #fff;
+}
+
+.std-continue-btn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 8px;
+  border: none;
+  background: #A07A80;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.std-continue-btn:hover {
+  background: #511317;
+}
+
+/* ==========================================================================
+   FULL SCREEN ATELIER SECTION (MATCHING REFERENCE IMAGE 1)
+   ========================================================================== */
+
+.t5-atelier-full-sec {
+  width: 100% !important;
+  padding: 30px 16px 50px !important;
+  display: flex !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+.t5-atelier-wide-banner {
+  width: 100% !important;
+  max-width: 1720px !important;
+  background: radial-gradient(ellipse at 50% 50%, #4D1219 0%, #300A0E 100%) !important;
+  border-radius: 20px !important;
+  padding: 56px 40px !important;
+  box-shadow: 0 20px 50px rgba(48, 10, 14, 0.25) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+  .t5-atelier-wide-banner {
+    padding: 36px 20px !important;
+    border-radius: 16px !important;
+  }
+}
+
+.t5-atelier-inner {
+  width: 100% !important;
+  max-width: 1020px !important;
+  display: grid !important;
+  grid-template-columns: 1.15fr 1fr !important;
+  gap: 56px !important;
+  align-items: center !important;
+}
+
+@media (max-width: 880px) {
+  .t5-atelier-inner {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+}
+
+.t5-at-left {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.t5-at-tag {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: rgba(250, 247, 242, 0.6) !important;
+}
+
+.t5-at-video-box {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  aspect-ratio: 4 / 3 !important;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.4) !important;
+  background: #1A0508 !important;
+}
+
+.t5-at-video-box video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.t5-at-right {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.t5-at-tag-right {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: rgba(250, 247, 242, 0.6) !important;
+  margin-bottom: 14px !important;
+}
+
+.t5-at-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: clamp(32px, 3.8vw, 46px) !important;
+  line-height: 1.15 !important;
+  color: #FAF7F2 !important;
+  margin: 0 0 16px !important;
+}
+
+.t5-at-desc {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 13.5px !important;
+  color: rgba(250, 247, 242, 0.8) !important;
+  line-height: 1.65 !important;
+  margin: 0 0 24px !important;
+}
+
+.t5-at-steps {
+  display: flex !important;
+  flex-direction: column !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+
+.t5-at-step-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  padding: 14px 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+
+.t5-at-num {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: rgba(250, 247, 242, 0.55) !important;
+}
+
+.t5-at-txt {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #FAF7F2 !important;
+}
+
+/* ==========================================================================
+   INSIDE YOUR INVITATION - UPWARD SCROLLING DEMO PHONE (MATCHING REFERENCE)
+   ========================================================================== */
+
+.t5-inv-steps {
+  display: flex !important;
+  flex-direction: column !important;
+  border-top: 1px solid rgba(89, 38, 47, 0.12) !important;
+}
+
+.t5-inv-step {
+  display: flex !important;
+  gap: 16px !important;
+  padding: 12px 14px !important;
+  border-bottom: 1px solid rgba(89, 38, 47, 0.08) !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  border-left: 3px solid transparent !important;
+}
+
+.t5-inv-step:hover {
+  background: rgba(89, 38, 47, 0.03) !important;
+}
+
+.t5-inv-step.active {
+  border-left-color: #511317 !important;
+  background: rgba(89, 38, 47, 0.04) !important;
+}
+
+.t5-inv-num {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #8A7570 !important;
+  margin-top: 2px !important;
+}
+
+.t5-inv-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 16px !important;
+  font-style: italic !important;
+  color: #2B2320 !important;
+}
+
+.t5-inv-step.active .t5-inv-title {
+  font-weight: 600 !important;
+  color: #511317 !important;
+}
+
+.t5-inv-sub {
+  font-size: 12px !important;
+  color: #7A6B65 !important;
+  line-height: 1.45 !important;
+  margin-top: 4px !important;
+  display: none !important;
+}
+
+.t5-inv-step.active .t5-inv-sub {
+  display: block !important;
+}
+
+.t5-inv-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+}
+
+.t5-inv-tag {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 11px !important;
+  color: #59262F !important;
+  background: rgba(89, 38, 47, 0.06) !important;
+  padding: 5px 12px !important;
+  border-radius: 999px !important;
+}
+
+.t5-inv-tag-plus {
+  background: transparent !important;
+  border: 1px dashed rgba(89, 38, 47, 0.25) !important;
+}
+
+/* Phone Mockup with Continuous Upward Scroll */
+.t5-inv-phone-chassis {
+  width: 310px !important;
+  height: 620px !important;
+  border-radius: 44px !important;
+  background: #181514 !important;
+  padding: 10px !important;
+  box-shadow: 0 28px 70px rgba(43, 35, 32, 0.22), 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+  border: 4px solid #332F2C !important;
+  position: relative !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+.t5-inv-island {
+  position: absolute !important;
+  top: 14px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 82px !important;
+  height: 20px !important;
+  background: #181514 !important;
+  border-radius: 999px !important;
+  z-index: 10 !important;
+}
+
+.t5-inv-home-bar {
+  position: absolute !important;
+  bottom: 12px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100px !important;
+  height: 4px !important;
+  background: rgba(255, 255, 255, 0.35) !important;
+  border-radius: 999px !important;
+  z-index: 10 !important;
+}
+
+.t5-inv-screen {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 34px !important;
+  overflow: hidden !important;
+  background: #fff !important;
+  position: relative !important;
+}
+
+.t5-inv-strip-img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  animation: t5-scroll-upward 45s linear infinite !important;
+  will-change: transform !important;
+}
+
+.t5-inv-screen:hover .t5-inv-strip-img {
+  animation-play-state: paused !important;
+}
+
+@keyframes t5-scroll-upward {
+  0% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-82%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

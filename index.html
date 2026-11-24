@@ -1,0 +1,2398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Wedding Invitations Designed by Hand | The Digital Yes</title>
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="shortcut icon" href="./favicon.png" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <style>
+    /* Exact visual matching refinements */
+    html {
+      overflow-y: scroll !important;
+      scroll-behavior: smooth !important;
+    }
+    body {
+      overflow: visible !important;
+    }
+    .t5 {
+      overflow: visible !important;
+    }
+
+    /* Fixed top Announcement bar in wine color */
+    .t5 .t5-ann {
+      background: #581825 !important;
+      color: #fff !important;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .t5 .t5-ann a {
+      color: #fff !important;
+      text-decoration: underline;
+    }
+
+    /* Header & Navigation Bar matching original */
+    .t5 .t5-hdr {
+      background: rgba(251, 247, 242, 0.94) !important;
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid rgba(43, 35, 32, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      width: 100%;
+    }
+    .t5 .t5-hdr-in {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+      min-height: 68px;
+    }
+    .t5 .t5-logo {
+      font-family: Montserrat, sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.32em !important;
+      color: #5C1A22 !important;
+      text-decoration: none;
+    }
+    .t5 .t5-nav {
+      display: flex !important;
+      align-items: center;
+      gap: 24px;
+    }
+    .t5 .t5-nav a, .t5-hdr-r .t5-lnk {
+      font-family: Montserrat, sans-serif;
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.14em !important;
+      text-transform: uppercase !important;
+      color: #5C1A22 !important;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .t5 .t5-nav a:hover {
+      opacity: 0.7;
+    }
+    .t5 .yp-badge {
+      background: #5C1A22;
+      color: #fff;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 999px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+    .t5-hdr-r {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .t5-lang-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #5C1A22;
+      cursor: pointer;
+    }
+    .t5-buy-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 22px;
+      border-radius: 999px;
+      background: #5C1A22 !important;
+      color: #fff !important;
+      font-family: Montserrat, sans-serif;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.16em !important;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 10px 24px -10px rgba(92, 26, 34, 0.6);
+      transition: all 0.2s ease;
+    }
+    .t5-buy-btn:hover {
+      background: #3E1016 !important;
+      transform: translateY(-1px);
+    }
+
+    /* Hero section exact styling */
+    .t5 .t5-hero-card {
+      min-height: calc(100vh - 120px);
+    }
+    .t5 .t5-hero-h {
+      font-family: 'Playfair Display', Georgia, serif !important;
+      font-style: italic !important;
+      font-weight: 400 !important;
+      font-size: clamp(48px, 6vw, 76px) !important;
+      line-height: 1.05 !important;
+      color: #2B2320 !important;
+    }
+    .t5-hero-sub {
+      font-size: 16px;
+      line-height: 1.65;
+      color: #59262F;
+      max-width: 44ch;
+    }
+    .t5-hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 52px;
+      padding: 0 28px;
+      border-radius: 999px;
+      background: #5C1A22 !important;
+      color: #fff !important;
+      font-family: Montserrat, sans-serif;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.18em !important;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 14px 30px -14px rgba(92, 26, 34, 0.6);
+    }
+    .t5-hero-tlink {
+      color: #2B2320;
+      text-decoration: underline;
+      font-size: 14px;
+      font-weight: 500;
+      margin-left: 12px;
+    }
+
+    /* Fixed Floating Cupi Chat & Toast */
+    .t5-cupi-toast {
+      position: fixed;
+      right: 28px;
+      bottom: 24px;
+      z-index: 99;
+      display: flex;
+      align-items: flex-end;
+      gap: 12px;
+    }
+    .t5-cupi-bubble {
+      background: #fff;
+      border-radius: 20px 20px 4px 20px;
+      padding: 14px 18px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #2B2320;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      max-width: 230px;
+      position: relative;
+    }
+    .t5-cupi-close {
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      font-size: 12px;
+      color: #8A7570;
+    }
+    .t5-cupi-avatar {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #F6F0EA;
+      border: 2px solid #5C1A22;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+    }
+    .t5-cupi-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Sticky Bottom Action Dock */
+    .t5-bottom-dock {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 90;
+      background: rgba(62, 16, 22, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 999px;
+      padding: 6px 10px 6px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 18px 40px rgba(62, 16, 22, 0.35);
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .t5-dock-btn {
+      background: #fff;
+      color: #5C1A22 !important;
+      font-family: Montserrat, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 9px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+    .t5-dock-ask {
+      color: #fff;
+      text-decoration: none;
+      font-size: 12.5px;
+      padding-right: 6px;
+    }
+  
+    /* EXACT 4 IN ONE ROW FOR WEDDING INVITATIONS GRID */
+    .wi-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 30px 20px !important;
+      width: 100% !important;
+    }
+    .wi-card {
+      width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+    }
+    .wi-media {
+      width: 100% !important;
+      aspect-ratio: 1 / 1 !important;
+    }
+  </style>
+</head>
+<body class="t5 t5-page-home" data-bg="mix">
+
+  <!-- 1. ANNOUNCEMENT & TOP STACK -->
+  <div class="t5-top-stack">
+    <div class="t5-ann">
+      <span>Black Friday · YES MONTH private sale: up to -30% · Instant access, 48 h to buy · 100 promotional places</span>
+      <a href="#plans">→</a>
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <header class="t5-hdr">
+      <div class="t5-hdr-in">
+        <a class="t5-logo" href="/" aria-label="The Digital Yes">
+          THE DIGITAL YES
+        </a>
+
+        <nav class="t5-nav" aria-label="Main Navigation">
+          <a href="#invitations">Invitations</a>
+          <a href="#plans">Plans & pricing</a>
+          <a href="#plans">
+            Yes Planner <span class="yp-badge">NEW</span>
+          </a>
+          <a href="#save-the-dates">Save the Dates</a>
+          <a href="#how-it-works">How it works</a>
+        </nav>
+
+        <div class="t5-hdr-r">
+          <div class="t5-lang-btn">
+            🌐 <span>EN · EUR</span>
+          </div>
+          <a class="t5-buy-btn" href="#plans">Buy now</a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <!-- 3. HERO SECTION -->
+    <section id="top" class="t5-hero" data-track-section="home_hero">
+      <div class="t5-hero-card">
+        <div class="t5-hero-bg" style="background-image: url('./assets/images/lace-hero-poster.webp');"></div>
+        <div class="t5-hero-veil"></div>
+
+        <div class="t5-hero-copy">
+          <a class="t5-proof" href="#reviews">
+            <span class="t5-stars" aria-hidden="true">★★★★★</span>
+            <b>4.9/5</b>
+            <span>·</span>
+            <span>278 reviews</span>
+            <span>·</span>
+            <span>3,000+ couples</span>
+          </a>
+
+          <p class="t5-eyebrow">DIGITAL WEDDING INVITATIONS</p>
+
+          <h1 class="t5-hero-h">
+            <span class="t5-w">We</span> <span class="t5-w">bring</span> <span class="t5-w">your</span><br />
+            <span class="t5-w">dream</span> <span class="t5-w">digital</span><br />
+            <span class="t5-w">wedding</span> <span class="t5-w">invitation</span><br />
+            <span class="t5-w">to</span> <span class="t5-w">life.</span>
+          </h1>
+
+          <p class="t5-hero-sub">
+            Choose a design you love. Our team personalises it with your names, photos and wedding details, ready to share with your guests.
+          </p>
+
+          <div class="t5-hero-ctas">
+            <a class="t5-hero-btn" href="#invitations">
+              EXPLORE 36 DESIGNS →
+            </a>
+            <a class="t5-hero-tlink" href="#plans">
+              Compare plans
+            </a>
+          </div>
+
+          <div class="t5-hero-meta">
+            <span>From €175 · One-time payment</span>
+            <span>·</span>
+            <a href="https://www.instagram.com/thedigitalyes/" target="_blank" rel="noopener noreferrer">
+              Instagram · 190,000+ followers
+            </a>
+            <span>·</span>
+            <a href="https://www.facebook.com/thedigitalyes" target="_blank" rel="noopener noreferrer">
+              Facebook · 100,000+ followers
+            </a>
+          </div>
+        </div>
+
+        <div class="t5-hero-stage">
+          <!-- Authentic Floating Embroidered Elements (All 9 items matching reference image) -->
+          <div class="t5-orn t5-o1" title="Embroidered Swans"><img src="./assets/images/embroidered-swans.webp" alt="Swans" /></div>
+          <div class="t5-orn t5-o7" title="White Calla Lilies"><img src="./assets/images/embroidered-calla-lilies.webp" alt="Calla Lilies" /></div>
+          <div class="t5-orn t5-o2" title="Royal Heart Locket"><img src="./assets/images/embroidered-royal-locket.webp" alt="Locket" /></div>
+          <div class="t5-orn t5-o3" title="Lace Stationery Envelope"><img src="./assets/images/tdy-draft-cover-DNth6W1k.webp" alt="Lace Envelope" /></div>
+          <div class="t5-orn t5-o4" title="Gold Wedding Rings"><img src="./assets/images/embroidered-gold-rings.webp" alt="Gold Rings" /></div>
+          <div class="t5-orn t5-o5" title="Terracotta Floral Bouquet"><img src="./assets/images/embroidered-terracotta-bouquet.webp" alt="Terracotta Bouquet" /></div>
+          <div class="t5-orn t5-o9" title="Ivory Wedding Rings"><img src="./assets/images/embroidered-ivory-rings.webp" alt="Ivory Rings" /></div>
+          <div class="t5-orn t5-o8" title="Antique Gold Key with Tassel"><img src="./assets/images/embroidered-gold-key.webp" alt="Gold Key" /></div>
+          <div class="t5-orn t5-o6" title="Tuscan Villa"><img src="./assets/images/embroidered-villa.webp" alt="Tuscan Villa" /></div>
+
+          <!-- Video phone frame -->
+          <div class="t5-phone">
+            <video autoplay loop muted playsinline poster="./assets/images/lace-hero-poster.webp">
+              <source src="./assets/videos/lace-hero.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- AUTO-SLIDING DESIGNS SHOWCASE (37 DESIGNS. EVERY ONE MADE YOURS BY HAND) -->
+    <section class="t5-sec t5-collection" style="padding: 40px 0 60px; overflow: hidden;">
+      <div class="t5-wrap" style="text-align: center; margin-bottom: 40px;">
+        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(34px, 4.5vw, 56px); color: #2B2320; margin: 0;">
+          37 designs. Every one made yours by hand.
+        </h2>
+      </div>
+
+      <div class="t5-cvm">
+        <div class="t5-cvt">
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/romantic-cover-l77RmkfT.webp" alt="ROMANTIC" loading="lazy" />
+          </div>
+          <span class="t5-cvn">ROMANTIC</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-lace-mockup-v2.webp" alt="LACE" loading="lazy" />
+          </div>
+          <span class="t5-cvn">LACE</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/mother-of-pearl-cover.webp" alt="MOTHER OF PEARL" loading="lazy" />
+          </div>
+          <span class="t5-cvn">MOTHER OF PEARL</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-embroidered-garden-mockup.png" alt="EMBROIDERED GARDEN" loading="lazy" />
+          </div>
+          <span class="t5-cvn">EMBROIDERED GARDEN</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-finca-mockup-DhpABHKz.webp" alt="LA FINCA" loading="lazy" />
+          </div>
+          <span class="t5-cvn">LA FINCA</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-daynight-mockup-Db4rWjSu.webp" alt="DAY & NIGHT" loading="lazy" />
+          </div>
+          <span class="t5-cvn">DAY & NIGHT</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-maison-doree-mockup-DUH7WrV9.webp" alt="LA MAISON DORÉE" loading="lazy" />
+          </div>
+          <span class="t5-cvn">LA MAISON DORÉE</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-royal-mockup-DdvHLywx.webp" alt="ROYAL" loading="lazy" />
+          </div>
+          <span class="t5-cvn">ROYAL</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-fresco.webp" alt="FRESCO" loading="lazy" />
+          </div>
+          <span class="t5-cvn">FRESCO</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-bella-vista-mockup.jpg" alt="BELLA VISTA" loading="lazy" />
+          </div>
+          <span class="t5-cvn">BELLA VISTA</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-majestic-mockup-DQkHhQMg.webp" alt="MAJESTIC" loading="lazy" />
+          </div>
+          <span class="t5-cvn">MAJESTIC</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-bridgerton-mockup.jpg" alt="BRIDGERTON" loading="lazy" />
+          </div>
+          <span class="t5-cvn">BRIDGERTON</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-stained-glass.webp" alt="STAINED GLASS" loading="lazy" />
+          </div>
+          <span class="t5-cvn">STAINED GLASS</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-secret-garden-mockup.jpg" alt="SECRET GARDEN" loading="lazy" />
+          </div>
+          <span class="t5-cvn">SECRET GARDEN</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-bloom-mockup-BAh8szKf.webp" alt="BLOOM" loading="lazy" />
+          </div>
+          <span class="t5-cvn">BLOOM</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-prestige-mockup-CduqdCKn.webp" alt="PRESTIGE" loading="lazy" />
+          </div>
+          <span class="t5-cvn">PRESTIGE</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-beach-mockup.webp" alt="BEACH" loading="lazy" />
+          </div>
+          <span class="t5-cvn">BEACH</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-papercraft-mockup.jpg" alt="PAPERCRAFT" loading="lazy" />
+          </div>
+          <span class="t5-cvn">PAPERCRAFT</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-teatro-mockup-RUkJP7uL.webp" alt="TEATRO" loading="lazy" />
+          </div>
+          <span class="t5-cvn">TEATRO</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-rosas-mockup-CygB_mw1.webp" alt="ROSAS" loading="lazy" />
+          </div>
+          <span class="t5-cvn">ROSAS</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-villa-perle-mockup-CHWMfpBu.webp" alt="VILLA PERLÉ" loading="lazy" />
+          </div>
+          <span class="t5-cvn">VILLA PERLÉ</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-cap-blanc-mockup.jpg" alt="CAP BLANC" loading="lazy" />
+          </div>
+          <span class="t5-cvn">CAP BLANC</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-eleganza-mockup.webp" alt="ELEGANZA" loading="lazy" />
+          </div>
+          <span class="t5-cvn">ELEGANZA</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-bellagio-mockup.webp" alt="BELLAGIO" loading="lazy" />
+          </div>
+          <span class="t5-cvn">BELLAGIO</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-odette-mockup.jpg" alt="ODETTE" loading="lazy" />
+          </div>
+          <span class="t5-cvn">ODETTE</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-boho-mockup.webp" alt="BOHO" loading="lazy" />
+          </div>
+          <span class="t5-cvn">BOHO</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-minimal-fun-mockup.webp" alt="MINIMAL FUN" loading="lazy" />
+          </div>
+          <span class="t5-cvn">MINIMAL FUN</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-africa-mockup.webp" alt="AFRICA" loading="lazy" />
+          </div>
+          <span class="t5-cvn">AFRICA</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-editorial-mockup-9HdxqR3K.webp" alt="EDITORIAL" loading="lazy" />
+          </div>
+          <span class="t5-cvn">EDITORIAL</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-dolcevita-mockup-Cjy4fDN1.webp" alt="DOLCE VITA" loading="lazy" />
+          </div>
+          <span class="t5-cvn">DOLCE VITA</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-nautical-mockup-DS6DZydW.webp" alt="NAUTICAL EDITION" loading="lazy" />
+          </div>
+          <span class="t5-cvn">NAUTICAL EDITION</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-mediterranean-edition-mockup-BMK2tlfF.webp" alt="MEDITERRANEAN" loading="lazy" />
+          </div>
+          <span class="t5-cvn">MEDITERRANEAN</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-floral-mockup-C6GeaP8n.webp" alt="FLORAL" loading="lazy" />
+          </div>
+          <span class="t5-cvn">FLORAL</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-rosas-mockup-CygB_mw1.webp" alt="DULCE AMOR" loading="lazy" />
+          </div>
+          <span class="t5-cvn">DULCE AMOR</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-minimal-mockup-BUjw7ue8.webp" alt="MINIMALISTA" loading="lazy" />
+          </div>
+          <span class="t5-cvn">MINIMALISTA</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-aventureros-mockup-B1k3kFdA.webp" alt="AVENTUREROS" loading="lazy" />
+          </div>
+          <span class="t5-cvn">AVENTUREROS</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/maison-des-cygnes-cover-BzlLHLuj.webp" alt="MAISON DES CYGNES" loading="lazy" />
+          </div>
+          <span class="t5-cvn">MAISON DES CYGNES</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/romantic-cover-l77RmkfT.webp" alt="ROMANTIC" loading="lazy" />
+          </div>
+          <span class="t5-cvn">ROMANTIC</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-lace-mockup-v2.webp" alt="LACE" loading="lazy" />
+          </div>
+          <span class="t5-cvn">LACE</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/mother-of-pearl-cover.webp" alt="MOTHER OF PEARL" loading="lazy" />
+          </div>
+          <span class="t5-cvn">MOTHER OF PEARL</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-embroidered-garden-mockup.png" alt="EMBROIDERED GARDEN" loading="lazy" />
+          </div>
+          <span class="t5-cvn">EMBROIDERED GARDEN</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-finca-mockup-DhpABHKz.webp" alt="LA FINCA" loading="lazy" />
+          </div>
+          <span class="t5-cvn">LA FINCA</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-daynight-mockup-Db4rWjSu.webp" alt="DAY & NIGHT" loading="lazy" />
+          </div>
+          <span class="t5-cvn">DAY & NIGHT</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-maison-doree-mockup-DUH7WrV9.webp" alt="LA MAISON DORÉE" loading="lazy" />
+          </div>
+          <span class="t5-cvn">LA MAISON DORÉE</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-royal-mockup-DdvHLywx.webp" alt="ROYAL" loading="lazy" />
+          </div>
+          <span class="t5-cvn">ROYAL</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-fresco.webp" alt="FRESCO" loading="lazy" />
+          </div>
+          <span class="t5-cvn">FRESCO</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-bella-vista-mockup.jpg" alt="BELLA VISTA" loading="lazy" />
+          </div>
+          <span class="t5-cvn">BELLA VISTA</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-majestic-mockup-DQkHhQMg.webp" alt="MAJESTIC" loading="lazy" />
+          </div>
+          <span class="t5-cvn">MAJESTIC</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-bridgerton-mockup.jpg" alt="BRIDGERTON" loading="lazy" />
+          </div>
+          <span class="t5-cvn">BRIDGERTON</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-stained-glass.webp" alt="STAINED GLASS" loading="lazy" />
+          </div>
+          <span class="t5-cvn">STAINED GLASS</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-secret-garden-mockup.jpg" alt="SECRET GARDEN" loading="lazy" />
+          </div>
+          <span class="t5-cvn">SECRET GARDEN</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-bloom-mockup-BAh8szKf.webp" alt="BLOOM" loading="lazy" />
+          </div>
+          <span class="t5-cvn">BLOOM</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-prestige-mockup-CduqdCKn.webp" alt="PRESTIGE" loading="lazy" />
+          </div>
+          <span class="t5-cvn">PRESTIGE</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-beach-mockup.webp" alt="BEACH" loading="lazy" />
+          </div>
+          <span class="t5-cvn">BEACH</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-papercraft-mockup.jpg" alt="PAPERCRAFT" loading="lazy" />
+          </div>
+          <span class="t5-cvn">PAPERCRAFT</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-teatro-mockup-RUkJP7uL.webp" alt="TEATRO" loading="lazy" />
+          </div>
+          <span class="t5-cvn">TEATRO</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-rosas-mockup-CygB_mw1.webp" alt="ROSAS" loading="lazy" />
+          </div>
+          <span class="t5-cvn">ROSAS</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-villa-perle-mockup-CHWMfpBu.webp" alt="VILLA PERLÉ" loading="lazy" />
+          </div>
+          <span class="t5-cvn">VILLA PERLÉ</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-cap-blanc-mockup.jpg" alt="CAP BLANC" loading="lazy" />
+          </div>
+          <span class="t5-cvn">CAP BLANC</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-eleganza-mockup.webp" alt="ELEGANZA" loading="lazy" />
+          </div>
+          <span class="t5-cvn">ELEGANZA</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-bellagio-mockup.webp" alt="BELLAGIO" loading="lazy" />
+          </div>
+          <span class="t5-cvn">BELLAGIO</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-odette-mockup.jpg" alt="ODETTE" loading="lazy" />
+          </div>
+          <span class="t5-cvn">ODETTE</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-boho-mockup.webp" alt="BOHO" loading="lazy" />
+          </div>
+          <span class="t5-cvn">BOHO</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-minimal-fun-mockup.webp" alt="MINIMAL FUN" loading="lazy" />
+          </div>
+          <span class="t5-cvn">MINIMAL FUN</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-africa-mockup.webp" alt="AFRICA" loading="lazy" />
+          </div>
+          <span class="t5-cvn">AFRICA</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-editorial-mockup-9HdxqR3K.webp" alt="EDITORIAL" loading="lazy" />
+          </div>
+          <span class="t5-cvn">EDITORIAL</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-dolcevita-mockup-Cjy4fDN1.webp" alt="DOLCE VITA" loading="lazy" />
+          </div>
+          <span class="t5-cvn">DOLCE VITA</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-nautical-mockup-DS6DZydW.webp" alt="NAUTICAL EDITION" loading="lazy" />
+          </div>
+          <span class="t5-cvn">NAUTICAL EDITION</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-mediterranean-edition-mockup-BMK2tlfF.webp" alt="MEDITERRANEAN" loading="lazy" />
+          </div>
+          <span class="t5-cvn">MEDITERRANEAN</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-floral-mockup-C6GeaP8n.webp" alt="FLORAL" loading="lazy" />
+          </div>
+          <span class="t5-cvn">FLORAL</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-rosas-mockup-CygB_mw1.webp" alt="DULCE AMOR" loading="lazy" />
+          </div>
+          <span class="t5-cvn">DULCE AMOR</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-minimal-mockup-BUjw7ue8.webp" alt="MINIMALISTA" loading="lazy" />
+          </div>
+          <span class="t5-cvn">MINIMALISTA</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/theme-aventureros-mockup-B1k3kFdA.webp" alt="AVENTUREROS" loading="lazy" />
+          </div>
+          <span class="t5-cvn">AVENTUREROS</span>
+        </a>
+        <a class="t5-cvi" href="#invitations">
+          <div class="t5-cvp">
+            <img src="./assets/images/maison-des-cygnes-cover-BzlLHLuj.webp" alt="MAISON DES CYGNES" loading="lazy" />
+          </div>
+          <span class="t5-cvn">MAISON DES CYGNES</span>
+        </a>
+      </div></div>
+      </div>
+    </section>
+
+    <!-- STATS ROW -->
+    <section class="t5-sec" style="padding-top: 10px;">
+      <div class="t5-wrap">
+        <div class="t5-stats">
+          <div class="t5-stat">
+            <b>4.9/5</b>
+            <p>average from 278 verified reviews</p>
+          </div>
+          <div class="t5-stat">
+            <b>3,000+</b>
+            <p>couples have trusted The Digital Yes to create their invitation</p>
+          </div>
+          <div class="t5-stat">
+            <b>190,000+</b>
+            <p>followers on Instagram</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    
+    <!-- EXACT WEDDING INVITATIONS SECTION -->
+    <section id="invitations" class="t5-sec wi-sec">
+      <div class="t5-wrap">
+        <div class="wi-top-bar">
+          <span class="wi-top-label">COLLECTION</span>
+          <span class="wi-top-note">EVERY DESIGN IS PERSONALISED FOR YOUR WEDDING BY OUR TEAM.</span>
+        </div>
+
+        <div class="wi-header-row">
+          <h2 class="wi-heading">
+            Wedding invitations <span class="wi-count">37</span>
+          </h2>
+          <a class="wi-btn-outline" href="#plans">VIEW ALL DESIGNS</a>
+        </div>
+
+        <div class="wi-sub-link">
+          <a href="#plans">YOUR WELCOME GIFT →</a>
+        </div>
+
+        <!-- 4-COLUMN CARDS GRID -->
+        <div class="wi-grid">
+          
+        <div class="wi-card">
+          <div class="wi-media">
+            <span class="wi-badge">NEW</span>
+            <button class="wi-heart" aria-label="Save to favourites">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <img src="./assets/images/theme-maison-des-cygnes-DWsydqBU.webp" alt="Maison des Cygnes" loading="lazy" />
+          </div>
+          <div class="wi-info">
+            <h3 class="wi-title">Maison des Cygnes</h3>
+            <p class="wi-desc">Sky-blue lace, swans and a tasselled seal</p>
+            <div class="wi-price">From €175</div>
+          </div>
+        </div>
+        
+
+        <div class="wi-card">
+          <div class="wi-media">
+            <span class="wi-badge">NEW</span>
+            <button class="wi-heart" aria-label="Save to favourites">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <img src="./assets/images/theme-romantic-illvwt4Z.webp" alt="Romantic" loading="lazy" />
+          </div>
+          <div class="wi-info">
+            <h3 class="wi-title">Romantic</h3>
+            <p class="wi-desc">Ivory boiserie doors, carnations and a music box</p>
+            <div class="wi-price">From €175</div>
+          </div>
+        </div>
+        
+
+        <div class="wi-card">
+          <div class="wi-media">
+            <span class="wi-badge">NEW</span>
+            <button class="wi-heart" aria-label="Save to favourites">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <img src="./assets/images/theme-lace-mockup-v2.webp" alt="Lace" loading="lazy" />
+          </div>
+          <div class="wi-info">
+            <h3 class="wi-title">Lace</h3>
+            <p class="wi-desc">Ivory lace, pearls and an embossed seal</p>
+            <div class="wi-price">From €175</div>
+          </div>
+        </div>
+        
+
+        <div class="wi-card">
+          <div class="wi-media">
+            <span class="wi-badge">NEW</span>
+            <button class="wi-heart" aria-label="Save to favourites">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <img src="./assets/images/theme-mother-of-pearl.webp" alt="Mother of Pearl" loading="lazy" />
+          </div>
+          <div class="wi-info">
+            <h3 class="wi-title">Mother of Pearl</h3>
+            <p class="wi-desc">Mother of pearl, ginkgo leaves and a golden seal</p>
+            <div class="wi-price">From €175</div>
+          </div>
+        </div>
+        
+
+        <div class="wi-card">
+          <div class="wi-media">
+            <span class="wi-badge">NEW</span>
+            <button class="wi-heart" aria-label="Save to favourites">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <img src="./assets/images/theme-embroidered-garden-mockup.png" alt="Embroidered Garden" loading="lazy" />
+          </div>
+          <div class="wi-info">
+            <h3 class="wi-title">Embroidered Garden</h3>
+            <p class="wi-desc">A hand-embroidered Provençal garden</p>
+            <div class="wi-price">From €175</div>
+          </div>
+        </div>
+        
+
+        <div class="wi-card">
+          <div class="wi-media">
+            
+            <button class="wi-heart" aria-label="Save to favourites">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <img src="./assets/images/theme-finca-mockup-DhpABHKz.webp" alt="La Finca" loading="lazy" />
+          </div>
+          <div class="wi-info">
+            <h3 class="wi-title">La Finca</h3>
+            <p class="wi-desc">Illustrated venue style</p>
+            <div class="wi-price">From €175</div>
+          </div>
+        </div>
+        
+
+        <div class="wi-card">
+          <div class="wi-media">
+            
+            <button class="wi-heart" aria-label="Save to favourites">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <img src="./assets/images/theme-daynight-mockup-Db4rWjSu.webp" alt="Day & Night" loading="lazy" />
+          </div>
+          <div class="wi-info">
+            <h3 class="wi-title">Day & Night</h3>
+            <p class="wi-desc">From day to night</p>
+            <div class="wi-price">From €175</div>
+          </div>
+        </div>
+        
+
+        <div class="wi-card">
+          <div class="wi-media">
+            <span class="wi-badge">EXCLUSIVE</span>
+            <button class="wi-heart" aria-label="Save to favourites">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <img src="./assets/images/theme-maison-doree-mockup-DUH7WrV9.webp" alt="La Maison Dorée" loading="lazy" />
+          </div>
+          <div class="wi-info">
+            <h3 class="wi-title">La Maison Dorée</h3>
+            <p class="wi-desc">Our new exclusive edition</p>
+            <div class="wi-price">From €175</div>
+          </div>
+        </div>
+        
+
+        <div class="wi-card">
+          <div class="wi-media">
+            
+            <button class="wi-heart" aria-label="Save to favourites">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <img src="./assets/images/theme-royal-mockup-DdvHLywx.webp" alt="Royal" loading="lazy" />
+          </div>
+          <div class="wi-info">
+            <h3 class="wi-title">Royal</h3>
+            <p class="wi-desc">Our permanent best seller</p>
+            <div class="wi-price">From €175</div>
+          </div>
+        </div>
+        
+
+        <div class="wi-card">
+          <div class="wi-media">
+            <span class="wi-badge">NEW</span>
+            <button class="wi-heart" aria-label="Save to favourites">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <img src="./assets/images/theme-fresco.webp" alt="Fresco" loading="lazy" />
+          </div>
+          <div class="wi-info">
+            <h3 class="wi-title">Fresco</h3>
+            <p class="wi-desc">Fresh, sun-drenched Mediterranean</p>
+            <div class="wi-price">From €175</div>
+          </div>
+        </div>
+        
+
+        <div class="wi-card">
+          <div class="wi-media">
+            
+            <button class="wi-heart" aria-label="Save to favourites">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <img src="./assets/images/theme-bella-vista-mockup-DNNhOGlg.webp" alt="Bella Vista" loading="lazy" />
+          </div>
+          <div class="wi-info">
+            <h3 class="wi-title">Bella Vista</h3>
+            <p class="wi-desc">Tuscan watercolour under string lights</p>
+            <div class="wi-price">From €175</div>
+          </div>
+        </div>
+        
+
+        <div class="wi-card">
+          <div class="wi-media">
+            
+            <button class="wi-heart" aria-label="Save to favourites">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <img src="./assets/images/theme-majestic-mockup-DQkHhQMg.webp" alt="Majestic" loading="lazy" />
+          </div>
+          <div class="wi-info">
+            <h3 class="wi-title">Majestic</h3>
+            <p class="wi-desc">Exclusive new release</p>
+            <div class="wi-price">From €175</div>
+          </div>
+        </div>
+        
+        </div>
+
+        <!-- BOTTOM BUTTON & EXCELLENCE BANNER -->
+        <div class="wi-actions">
+          <a class="wi-btn-large" href="#plans">SHOW ALL 37 DESIGNS</a>
+          <p class="wi-std-note">
+            <a href="#save-the-dates">Save the Dates</a> · Complimentary with Premium · €75 per design on its own
+          </p>
+
+          <div class="wi-excellence-banner">
+            <div class="wi-ex-text">
+              <h4>Looking for something fully custom?</h4>
+              <p>Check our Excellence plan: an invitation designed from scratch.</p>
+            </div>
+            <a class="wi-ex-link" href="#plans">See Excellence →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- EXACT REVIEWS SECTION MATCHING SCREENSHOT 1 -->
+    <section id="reviews" class="t5-sec rev-sec">
+      <div class="t5-wrap">
+        <div class="rev-top-bar">
+          <span class="rev-top-label">COUPLES</span>
+          <span class="rev-top-note">VERIFIED REVIEWS</span>
+        </div>
+
+        <div class="rev-header-row">
+          <h2 class="rev-heading">See what others are saying.</h2>
+          <div class="rev-score-block">
+            <span class="rev-score-num">4.9</span>
+            <div class="rev-score-meta">
+              <span class="rev-stars">★★★★★</span>
+              <span class="rev-score-txt">278 verified reviews · 3,000+ couples worldwide</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rev-cards-grid">
+          <!-- Review Card 1 -->
+          <div class="rev-card">
+            <div class="rev-card-stars">★★★★★</div>
+            <p class="rev-card-text">
+              "We couldn't be happier with our wedding website! The final result is exactly what we had envisioned, and the entire experience was fantastic. Charlotte was amazing throughout the process: incredibly helpful, patient, responsive, and always attentive to the smallest details. She really went above and beyond to bring our vision to life. We highly recommend The Digital Yes to anyone looking for a beautiful, personalized wedding website. Thank you so much, Charlotte!"
+            </p>
+            <div class="rev-card-footer">
+              <div class="rev-card-author">
+                <strong>Charlotte &amp; Thomas</strong>
+                <span>Verified review</span>
+              </div>
+              <span class="rev-card-date">10/30/2026</span>
+            </div>
+          </div>
+
+          <!-- Review Card 2 -->
+          <div class="rev-card">
+            <div class="rev-card-stars">★★★★★</div>
+            <p class="rev-card-text">
+              "Super easy process, quick turn around. The save the date and invite looked amazing! perfect! and we got so many compliments... thank you!"
+            </p>
+            <div class="rev-card-footer">
+              <div class="rev-card-author">
+                <strong>Rochelle &amp; Mike</strong>
+                <span>Verified review</span>
+              </div>
+              <span class="rev-card-date">10/30/2026</span>
+            </div>
+          </div>
+
+          <!-- Review Card 3 -->
+          <div class="rev-card">
+            <div class="rev-card-stars">★★★★★</div>
+            <p class="rev-card-text">
+              "We had such a wonderful experience working with Charlotte from The Digital Yes for our wedding invitations! From the very beginning, she was incredibly patient, professional, and accommodating throughout the entire process. We had a very specific vision for our invitations, and Charlotte really took the time to understand what we wanted and bring it to life. She was always receptive to our feedback, happy to make adjustments, and paid attention to even the smallest details to ensure everything was just right. Planning a destination wedding comes with so many moving parts, and having someone as helpful and responsive as Charlotte made the invitation process so much easier. We absolutely love how our invitations turned out and couldn't be happier with the final result! We would highly recommend Charlotte and The Digital Yes to anyone looking for beautiful, personalized wedding invitations. Thank you for helping make this part of our wedding so special!"
+            </p>
+            <div class="rev-card-footer">
+              <div class="rev-card-author">
+                <strong>Nirali and Manan</strong>
+                <span>Verified review</span>
+              </div>
+              <span class="rev-card-date">10/31/2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rev-bottom-link">
+          <a href="#plans">See all reviews</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXACT HOW IT WORKS SECTION MATCHING SCREENSHOT 2 -->
+    
+    <!-- EXACT INTERACTIVE 3-STEP STORY SLIDER MATCHING SCREENSHOTS -->
+    <section id="how-it-works" class="t5-sec hw-interactive-sec">
+      <div class="t5-wrap">
+        <div class="hw-top-bar">
+          <span class="hw-top-label">HOW IT WORKS</span>
+          <span class="hw-top-note">THREE STEPS. NO DESIGN SKILLS NEEDED.</span>
+        </div>
+
+        <div class="hw-sticky-layout">
+          <!-- Left: Sticky Tabs Indicator -->
+          <div class="hw-sticky-nav">
+            <button class="hw-tab active" data-step="1">
+              <span class="hw-tab-num">01</span>
+              <span class="hw-tab-title">Choose</span>
+            </button>
+            <button class="hw-tab" data-step="2">
+              <span class="hw-tab-num">02</span>
+              <span class="hw-tab-title">We create it</span>
+            </button>
+            <button class="hw-tab" data-step="3">
+              <span class="hw-tab-num">03</span>
+              <span class="hw-tab-title">Share one link</span>
+            </button>
+          </div>
+
+          <!-- Center: Sticky Dynamic Visual Slide -->
+          <div class="hw-sticky-visual">
+            <!-- Slide 1 Visual -->
+            <div class="hw-slide-media active" id="hwMedia1">
+              <img class="hw-main-img" src="./assets/images/envelope-collection-webp-cdn-960w.webp" alt="Envelopes" />
+              <div class="hw-pricing-box">
+                <span class="hw-box-subtitle">A DESIGN FOR EVERY WEDDING · THREE LEVELS OF PERSONALISATION</span>
+                <div class="hw-pricing-cols">
+                  <div class="hw-pcol">
+                    <span class="hw-pcol-title">Essential</span>
+                    <span class="hw-pcol-desc">This design, with all your details</span>
+                    <span class="hw-pcol-price">€175</span>
+                  </div>
+                  <div class="hw-pcol">
+                    <span class="hw-pcol-title">Premium</span>
+                    <span class="hw-pcol-desc">Redesigned around your wedding</span>
+                    <span class="hw-pcol-price">€575</span>
+                  </div>
+                  <div class="hw-pcol">
+                    <span class="hw-pcol-title">Excellence</span>
+                    <span class="hw-pcol-desc">Bespoke, from scratch</span>
+                    <span class="hw-pcol-price">€975</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 Visual -->
+            <div class="hw-slide-media" id="hwMedia2">
+              <div class="hw-video-container">
+                <video autoplay loop muted playsinline poster="./assets/images/tdy-atelier-poster-DWbS7x3O.webp" class="hw-studio-video">
+                  <source src="./assets/videos/atelier-team.mp4" type="video/mp4" />
+                </video>
+                <div class="hw-video-caption">Handcrafting your design in our studio</div>
+              </div>
+            </div>
+
+            <!-- Slide 3 Visual -->
+            <div class="hw-slide-media" id="hwMedia3">
+              <div class="hw-share-mockup">
+                <img src="./assets/images/tdy-wa-link-DMMPrNX2.webp" alt="WhatsApp Share Link" class="hw-wa-img" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Scrolling Step Descriptions -->
+          <div class="hw-steps-scroll">
+            <!-- Step 1 Content -->
+            <div class="hw-step-pane active" id="hwStep1" data-step="1">
+              <span class="hw-step-gold-num">01</span>
+              <h3 class="hw-step-title">
+                Choose your<br />
+                design &amp; plan.
+              </h3>
+              <p class="hw-step-desc">
+                Pick a design and how personal you want it: as it is, fully redesigned around your wedding, or bespoke from scratch.
+              </p>
+              <a class="hw-step-link" href="#plans">Compare plans →</a>
+            </div>
+
+            <!-- Step 2 Content -->
+            <div class="hw-step-pane" id="hwStep2" data-step="2">
+              <span class="hw-step-gold-num">02</span>
+              <h3 class="hw-step-title">
+                We create it<br />
+                by hand.
+              </h3>
+              <p class="hw-step-desc">
+                Fill out your wedding details in our private form. Our studio team personally creates your custom invitation with unlimited revisions until it's perfect.
+              </p>
+              <a class="hw-step-link" href="#plans">How we design →</a>
+            </div>
+
+            <!-- Step 3 Content -->
+            <div class="hw-step-pane" id="hwStep3" data-step="3">
+              <span class="hw-step-gold-num">03</span>
+              <h3 class="hw-step-title">
+                Share one link<br />
+                with everyone.
+              </h3>
+              <p class="hw-step-desc">
+                Send your private link via WhatsApp, email, or SMS. Your guests get instant access to your RSVP, schedule, maps and music in one touch.
+              </p>
+              <a class="hw-step-link" href="#plans">Explore invitations →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    
+    <!-- 6. SAVE THE DATES COLLECTION -->
+    <section id="save-the-dates" class="t5-sec" style="padding-top:40px;">
+      <div class="t5-wrap">
+        <div class="t5-sh">
+          <span>COLLECTION</span>
+          <span>ANNOUNCE THE DATE WITH AN INTERACTIVE PIECE</span>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; margin: 20px 0 28px;">
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <h2 class="t5-h2" style="margin:0; display:flex; align-items:center; gap:12px;">
+              Save the Dates <span style="font-family:Montserrat,sans-serif; font-size:14px; font-weight:500; border:1px solid rgba(89,38,47,0.25); border-radius:999px; padding:2px 10px; color:#59262F;">16</span>
+            </h2>
+            <div style="display:inline-flex; align-items:center; gap:8px; font-size:13px; color:#59262F; background:rgba(89,38,47,0.06); padding:6px 14px; border-radius:999px; width:fit-content;">
+              <span style="color:#2E7D32; font-weight:700;">✓</span> Complimentary with Premium · €75 per design on its own
+            </div>
+          </div>
+          <div>
+            <a href="#save-the-dates" class="t5-btn t5-btn-o" style="font-size:12px; letter-spacing:0.12em; padding:10px 22px; text-transform:uppercase;">VIEW ALL SAVE THE DATES</a>
+          </div>
+        </div>
+
+        <!-- Filter Pill Tabs -->
+        <div style="display:inline-flex; background:rgba(89,38,47,0.06); padding:4px; border-radius:999px; margin-bottom:32px; gap:4px;">
+          <button class="t5-std-tab active" onclick="switchStdTab(this, 'classic')">Classic</button>
+          <button class="t5-std-tab" onclick="switchStdTab(this, 'popup')">3D Pop-Up <span style="background:#511317; color:#fff; font-size:10px; padding:2px 7px; border-radius:999px; margin-left:6px;">NEW</span></button>
+        </div>
+
+        <!-- 5-Card Grid -->
+        <div class="t5-std-5grid" id="stdGrid">
+          <!-- Card 1: Custom -->
+          <div class="t5-std-item" style="cursor:pointer;" onclick="openStdModal('Custom', '€135')">
+            <div class="t5-std-media t5-std-custom-box">
+              <div class="t5-custom-star">✦</div>
+            </div>
+            <div class="t5-std-meta">
+              <h3 class="t5-std-title">Custom</h3>
+              <p class="t5-std-desc">Your design here</p>
+              <div class="t5-std-price-row">
+                <span class="t5-std-price">From €135</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Photobooth -->
+          <div class="t5-std-item">
+            <div class="t5-std-media">
+              <img src="./assets/images/std-photobooth.webp" alt="Photobooth Save the Date" loading="lazy" />
+            </div>
+            <div class="t5-std-meta">
+              <h3 class="t5-std-title">Photobooth</h3>
+              <p class="t5-std-desc">Your photobooth strip in a vintage gold frame on burgundy velvet. Nostalgic, elegant and unmistakably yours.</p>
+              <div class="t5-std-price-row">
+                <span class="t5-std-price">€75</span>
+                <button class="t5-fav-btn" aria-label="Favorite" onclick="toggleFav(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Heartfold -->
+          <div class="t5-std-item">
+            <div class="t5-std-media">
+              <img src="./assets/images/std-heartfold.png" alt="Heartfold Save the Date" loading="lazy" />
+            </div>
+            <div class="t5-std-meta">
+              <h3 class="t5-std-title">Heartfold</h3>
+              <p class="t5-std-desc">Delicate florals and ivory drapes frame your date. Romantic, refined and timeless.</p>
+              <div class="t5-std-price-row">
+                <span class="t5-std-price">€75</span>
+                <button class="t5-fav-btn" aria-label="Favorite" onclick="toggleFav(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: The Lovebirds -->
+          <div class="t5-std-item">
+            <div class="t5-std-media">
+              <img src="./assets/images/lovebird.png" alt="The Lovebirds Save the Date" loading="lazy" />
+            </div>
+            <div class="t5-std-meta">
+              <h3 class="t5-std-title">The Lovebirds</h3>
+              <p class="t5-std-desc">Two lovebirds, soft florals and a gentle countdown. Romantic and quietly elegant.</p>
+              <div class="t5-std-price-row">
+                <span class="t5-std-price">€75</span>
+                <button class="t5-fav-btn" aria-label="Favorite" onclick="toggleFav(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Photo Scratch -->
+          <div class="t5-std-item">
+            <div class="t5-std-media">
+              <img src="./assets/images/std-photo-scratch.webp" alt="Photo Scratch Save the Date" loading="lazy" />
+            </div>
+            <div class="t5-std-meta">
+              <h3 class="t5-std-title">Photo Scratch</h3>
+              <p class="t5-std-desc">Your photo revealed by scratching. A playful reveal your guests will remember.</p>
+              <div class="t5-std-price-row">
+                <span class="t5-std-price">€75</span>
+                <button class="t5-fav-btn" aria-label="Favorite" onclick="toggleFav(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Extra cards hidden by default, shown when clicking Show All -->
+          <div class="t5-std-item t5-std-extra" style="display:none;">
+            <div class="t5-std-media">
+              <img src="./assets/images/std-candlelight.webp" alt="Candlelight Save the Date" loading="lazy" />
+            </div>
+            <div class="t5-std-meta">
+              <h3 class="t5-std-title">Candlelight</h3>
+              <p class="t5-std-desc">Tap to light the candles. Warm, cinematic and intimate.</p>
+              <div class="t5-std-price-row">
+                <span class="t5-std-price">€75</span>
+                <button class="t5-fav-btn" aria-label="Favorite" onclick="toggleFav(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="t5-std-item t5-std-extra" style="display:none;">
+            <div class="t5-std-media">
+              <img src="./assets/images/std-cisnes.webp" alt="Swans Save the Date" loading="lazy" />
+            </div>
+            <div class="t5-std-meta">
+              <h3 class="t5-std-title">Swans</h3>
+              <p class="t5-std-desc">Watercolor swans and live countdown. Quiet and poetic.</p>
+              <div class="t5-std-price-row">
+                <span class="t5-std-price">€75</span>
+                <button class="t5-fav-btn" aria-label="Favorite" onclick="toggleFav(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="t5-std-item t5-std-extra" style="display:none;">
+            <div class="t5-std-media">
+              <img src="./assets/images/std-bloom.webp" alt="Bloom Save the Date" loading="lazy" />
+            </div>
+            <div class="t5-std-meta">
+              <h3 class="t5-std-title">Bloom</h3>
+              <p class="t5-std-desc">Delicate florals in bloom. Soft, feminine and celebratory.</p>
+              <div class="t5-std-price-row">
+                <span class="t5-std-price">€75</span>
+                <button class="t5-fav-btn" aria-label="Favorite" onclick="toggleFav(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="t5-std-item t5-std-extra" style="display:none;">
+            <div class="t5-std-media">
+              <img src="./assets/images/std-floral.webp" alt="Floral Save the Date" loading="lazy" />
+            </div>
+            <div class="t5-std-meta">
+              <h3 class="t5-std-title">Botanical</h3>
+              <p class="t5-std-desc">Lush green botanical arches and golden script.</p>
+              <div class="t5-std-price-row">
+                <span class="t5-std-price">€75</span>
+                <button class="t5-fav-btn" aria-label="Favorite" onclick="toggleFav(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="t5-std-item t5-std-extra" style="display:none;">
+            <div class="t5-std-media">
+              <img src="./assets/images/std-scratch-heart.webp" alt="Heart Scratch Save the Date" loading="lazy" />
+            </div>
+            <div class="t5-std-meta">
+              <h3 class="t5-std-title">Heart Scratch</h3>
+              <p class="t5-std-desc">Scratch to reveal the date. A playful, tactile keepsake.</p>
+              <div class="t5-std-price-row">
+                <span class="t5-std-price">€75</span>
+                <button class="t5-fav-btn" aria-label="Favorite" onclick="toggleFav(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Show All Button -->
+        <div style="text-align:center; margin-top:40px;">
+          <button class="t5-btn t5-btn-o" id="stdToggleBtn" onclick="toggleStdMore()" style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; padding:14px 32px;">
+            SHOW ALL 16 SAVE THE DATES · 12 MORE
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. ATELIER WIDE BANNER (MATCHING REFERENCE IMAGE 1) -->
+    <section class="t5-atelier-full-sec">
+      <div class="t5-atelier-wide-banner">
+        <div class="t5-atelier-inner">
+          <!-- Left: Video & Top Tag -->
+          <div class="t5-at-left">
+            <div class="t5-at-tag">ATELIER</div>
+            <div class="t5-at-video-box">
+              <video autoplay loop muted playsinline poster="./assets/images/tdy-atelier-poster-DWbS7x3O.webp">
+                <source src="./assets/videos/atelier-team.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+
+          <!-- Right: Information & 3 Clean Steps -->
+          <div class="t5-at-right">
+            <div class="t5-at-tag-right">REAL DESIGNERS, NOT AN EDITOR</div>
+            <h2 class="t5-at-title">Handcrafted<br />by our team</h2>
+            <p class="t5-at-desc">
+              We design it for you: choose a design and our team personalises it with your details, your story and the level of personalisation of your plan.
+            </p>
+
+            <div class="t5-at-steps">
+              <div class="t5-at-step-row">
+                <span class="t5-at-num">01</span>
+                <span class="t5-at-txt">Choose a design.</span>
+              </div>
+              <div class="t5-at-step-row">
+                <span class="t5-at-num">02</span>
+                <span class="t5-at-txt">Share your details.</span>
+              </div>
+              <div class="t5-at-step-row">
+                <span class="t5-at-num">03</span>
+                <span class="t5-at-txt">We design, you approve.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. INSIDE YOUR INVITATION (REAL SCREENS FROM A DEMO) -->
+    <section class="t5-sec" id="features">
+      <div class="t5-wrap">
+        <div class="t5-sh">
+          <span>INSIDE YOUR INVITATION</span>
+          <span>REAL SCREENS FROM A DEMO</span>
+        </div>
+
+        <div class="t5-features-grid">
+          <!-- Left: 7 Interactive Steps & Customisation Badges -->
+          <div class="t5-features-left">
+            <h2 class="t5-h2" style="margin-top:0; margin-bottom:14px;">
+              Everything your guests need. Nothing they don't.
+            </h2>
+            <p class="t5-lead" style="margin-bottom:28px; max-width:54ch;">
+              There is no fixed template to fill in. Your designer writes every section around your wedding: the ones you want, in the order you want, in your languages. One link holds it all.
+            </p>
+
+            <!-- 7 Section List Items -->
+            <div class="t5-inv-steps">
+              <div class="t5-inv-step" onclick="jumpToDemoSection(0)">
+                <span class="t5-inv-num">01</span>
+                <div class="t5-inv-body">
+                  <div class="t5-inv-title">Your cover, your names</div>
+                  <div class="t5-inv-sub">Hand-painted monogram, animated wax seal and music reveal.</div>
+                </div>
+              </div>
+
+              <div class="t5-inv-step" onclick="jumpToDemoSection(1)">
+                <span class="t5-inv-num">02</span>
+                <div class="t5-inv-body">
+                  <div class="t5-inv-title">Countdown</div>
+                  <div class="t5-inv-sub">Live countdown to the celebration with romantic typography.</div>
+                </div>
+              </div>
+
+              <div class="t5-inv-step" onclick="jumpToDemoSection(2)">
+                <span class="t5-inv-num">03</span>
+                <div class="t5-inv-body">
+                  <div class="t5-inv-title">Scratch to reveal</div>
+                  <div class="t5-inv-sub">Interactive tactile scratch card revealing hidden photos.</div>
+                </div>
+              </div>
+
+              <div class="t5-inv-step active" onclick="jumpToDemoSection(3)">
+                <span class="t5-inv-num">04</span>
+                <div class="t5-inv-body">
+                  <div class="t5-inv-title">Ceremony, map &amp; calendar</div>
+                  <div class="t5-inv-sub">Open in Maps and add to calendar in one tap.</div>
+                </div>
+              </div>
+
+              <div class="t5-inv-step" onclick="jumpToDemoSection(4)">
+                <span class="t5-inv-num">05</span>
+                <div class="t5-inv-body">
+                  <div class="t5-inv-title">Dress code &amp; programme</div>
+                  <div class="t5-inv-sub">Visual moodboards, color palette and day schedule timeline.</div>
+                </div>
+              </div>
+
+              <div class="t5-inv-step" onclick="jumpToDemoSection(5)">
+                <span class="t5-inv-num">06</span>
+                <div class="t5-inv-body">
+                  <div class="t5-inv-title">Gifts, travel &amp; stay</div>
+                  <div class="t5-inv-sub">Honeymoon fund, hotel bookings and transport details.</div>
+                </div>
+              </div>
+
+              <div class="t5-inv-step" onclick="jumpToDemoSection(6)">
+                <span class="t5-inv-num">07</span>
+                <div class="t5-inv-body">
+                  <div class="t5-inv-title">Real-time RSVP</div>
+                  <div class="t5-inv-sub">Dietary requirements, plus-ones and instant dashboard tracking.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Custom Order Pills -->
+            <div style="margin-top:28px;">
+              <div style="font-family:Montserrat,sans-serif; font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8A7570; margin-bottom:12px;">
+                YOUR SECTIONS, IN YOUR ORDER
+              </div>
+              <div class="t5-inv-tags">
+                <span class="t5-inv-tag">Ceremony &amp; reception</span>
+                <span class="t5-inv-tag">RSVP</span>
+                <span class="t5-inv-tag">Dress code</span>
+                <span class="t5-inv-tag">Transport</span>
+                <span class="t5-inv-tag">Gifts</span>
+                <span class="t5-inv-tag">Day schedule</span>
+                <span class="t5-inv-tag">Accommodation</span>
+                <span class="t5-inv-tag">Welcome party</span>
+                <span class="t5-inv-tag">FAQ</span>
+                <span class="t5-inv-tag t5-inv-tag-plus">+ any section you imagine</span>
+              </div>
+              <div style="font-size:12px; color:#8A7570; margin-top:14px;">
+                Up to 2 languages: each guest reads it in theirs.
+              </div>
+            </div>
+
+            <div style="margin-top:28px;">
+              <a class="t5-btn" href="#invitations" style="background:#511317; color:#fff; border-radius:999px; padding:14px 34px; font-size:12px; letter-spacing:0.12em; text-transform:uppercase;">
+                START MY INVITATION
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Phone with Upward Scrolling Invitation Strip -->
+          <div class="t5-features-right">
+            <div class="t5-inv-phone-chassis">
+              <div class="t5-inv-island"></div>
+              <div class="t5-inv-screen" id="invScreenContainer">
+                <img src="./assets/images/tdy-stainedglass-strip-DqYrZcE6.webp" alt="Live Invitation Demo Screen" class="t5-inv-strip-img" id="invStripImg" />
+              </div>
+              <div class="t5-inv-home-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CHOOSE YOUR PLAN (PRICING) -->
+    <section id="plans" class="t5-sec">
+      <div class="t5-wrap">
+        <div class="t5-sh">
+          <span>CHOOSE YOUR PLAN</span>
+          <span>ONE-TIME PAYMENT · NO SUBSCRIPTIONS</span>
+        </div>
+
+        <div style="text-align:center; max-width:720px; margin:0 auto 40px;">
+          <h2 class="t5-h2" style="margin-bottom:16px;">Choose your plan.</h2>
+          <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:16px; font-size:14px; color:#59262F;">
+            <span><strong style="color:#2E7D32;">✓</strong> RSVP built in</span>
+            <span><strong style="color:#2E7D32;">✓</strong> Unlimited sends</span>
+            <span><strong style="color:#2E7D32;">✓</strong> Any language</span>
+            <span><strong style="color:#2E7D32;">✓</strong> Unlimited revisions</span>
+          </div>
+        </div>
+
+        <div class="t5-pricing-3col">
+          <!-- Essential -->
+          <div class="t5-pcard">
+            <div class="t5-pcard-header">
+              <h3 class="t5-pcard-name">Essential</h3>
+              <div class="t5-pcard-price">€175</div>
+              <p class="t5-pcard-desc">The classic digital invitation for elegant couples.</p>
+            </div>
+            <ul class="t5-pcard-features">
+              <li>✓ Chosen invitation theme</li>
+              <li>✓ Personalized names, date & location</li>
+              <li>✓ Google Maps & Calendar integration</li>
+              <li>✓ RSVP confirmation via WhatsApp or Email</li>
+              <li>✓ Up to 2 languages</li>
+              <li>✓ Mobile & desktop responsive</li>
+              <li>✓ Unlimited design revisions</li>
+            </ul>
+            <div style="margin-top:auto; padding-top:24px;">
+              <a class="t5-btn t5-btn-o" style="width:100%; text-align:center;" href="#invitations">GET ESSENTIAL</a>
+            </div>
+          </div>
+
+          <!-- Premium -->
+          <div class="t5-pcard t5-pcard-highlight">
+            <div class="t5-pcard-badge">RECOMMENDED · INCLUDES SAVE THE DATE</div>
+            <div class="t5-pcard-header">
+              <h3 class="t5-pcard-name">Premium</h3>
+              <div class="t5-pcard-price">€575</div>
+              <p class="t5-pcard-desc">The complete interactive mini-site with private guest portal.</p>
+            </div>
+            <ul class="t5-pcard-features">
+              <li>✓ <strong>Free Save the Date included (€75 value)</strong></li>
+              <li>✓ Everything in Essential</li>
+              <li>✓ Advanced RSVP dashboard (diet, plus-ones)</li>
+              <li>✓ Romantic background music player</li>
+              <li>✓ Full wedding day schedule & timeline</li>
+              <li>✓ Dress code & photo gallery</li>
+              <li>✓ Honeymoon fund & bank details</li>
+              <li>✓ Unlimited languages</li>
+              <li>✓ Priority turnaround (3 business days)</li>
+            </ul>
+            <div style="margin-top:auto; padding-top:24px;">
+              <a class="t5-btn" style="width:100%; text-align:center; background:#511317; color:#fff;" href="#invitations">CREATE MY INVITATION</a>
+            </div>
+          </div>
+
+          <!-- Excellence -->
+          <div class="t5-pcard t5-pcard-bespoke">
+            <div class="t5-pcard-badge-bespoke">BESPOKE · LIMITED TO 4 / MONTH</div>
+            <div class="t5-pcard-header">
+              <h3 class="t5-pcard-name">Excellence</h3>
+              <div class="t5-pcard-price">€975</div>
+              <p class="t5-pcard-desc">100% bespoke couture invitation designed from scratch.</p>
+            </div>
+            <ul class="t5-pcard-features">
+              <li>✓ <strong>Free Save the Date included</strong></li>
+              <li>✓ 100% custom illustration drawn from your venue</li>
+              <li>✓ Custom domain name (e.g. mariaandalex.com)</li>
+              <li>✓ Bespoke animations & music curation</li>
+              <li>✓ VIP 48-hour delivery</li>
+              <li>✓ Dedicated art director on WhatsApp</li>
+              <li>✓ Guest WhatsApp reminder service</li>
+            </ul>
+            <div style="margin-top:auto; padding-top:24px;">
+              <a class="t5-btn t5-btn-o" style="width:100%; text-align:center;" href="#invitations">START BESPOKE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. SAME DESIGN: TWO LEVELS OF PERSONALISATION (BEACH COMPARISON) -->
+    <section class="t5-sec" style="background:#FAF7F2; padding:80px 0;">
+      <div class="t5-wrap">
+        <div style="text-align:center; max-width:760px; margin:0 auto 48px;">
+          <div class="t5-sh" style="justify-content:center;"><span>LEVELS OF PERSONALISATION</span></div>
+          <h2 class="t5-h2" style="margin-bottom:14px;">Same design, two levels of personalisation.</h2>
+          <p class="t5-lead" style="margin:0 auto;">
+            See how our team takes an invitation from standard elegance to bespoke hand-illustrated perfection.
+          </p>
+        </div>
+
+        <!-- Phone Comparison Side by Side -->
+        <div class="t5-compare-grid">
+          <div class="t5-compare-col">
+            <div class="t5-compare-phone">
+              <img src="./assets/images/beach-essential-example.jpg" alt="Essential Beach Design" />
+            </div>
+            <div class="t5-compare-info">
+              <span class="t5-compare-pill">ESSENTIAL · €175</span>
+              <h3>Essential Edition</h3>
+              <p>Standard curated palette, timeless typography and your essential wedding details.</p>
+            </div>
+          </div>
+
+          <div class="t5-compare-divider">
+            <div class="t5-compare-arrow">➔</div>
+          </div>
+
+          <div class="t5-compare-col">
+            <div class="t5-compare-phone">
+              <img src="./assets/images/beach-premium-example.jpg" alt="Premium Beach Design" />
+            </div>
+            <div class="t5-compare-info">
+              <span class="t5-compare-pill t5-compare-pill-gold">PREMIUM · €575</span>
+              <h3>Premium Handcrafted</h3>
+              <p>Hand-illustrated portrait of the couple, custom floral artwork, bespoke crest & music.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="t5-compare-table-wrap">
+          <table class="t5-compare-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Essential</th>
+                <th>Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cover Illustration</strong></td>
+                <td>Curated collection artwork</td>
+                <td><strong style="color:#511317;">Hand-illustrated couple portrait</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Colours & Palette</strong></td>
+                <td>Standard palette</td>
+                <td><strong style="color:#511317;">Custom matched to your florals</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Monogram & Wax Seal</strong></td>
+                <td>Standard serif typography</td>
+                <td><strong style="color:#511317;">Bespoke couple crest & custom seal</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Save the Date</strong></td>
+                <td>€75 add-on</td>
+                <td><strong style="color:#2E7D32;">Included complimentary</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Languages</strong></td>
+                <td>Up to 2</td>
+                <td><strong style="color:#511317;">Unlimited languages</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Revisions & Support</strong></td>
+                <td>Email revisions</td>
+                <td><strong style="color:#511317;">Dedicated WhatsApp designer</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="display:flex; justify-content:center; gap:16px; margin-top:36px; flex-wrap:wrap;">
+          <a class="t5-btn" href="#plans" style="padding:14px 32px;">CHOOSE PREMIUM</a>
+          <a class="t5-btn t5-btn-o" href="#plans" style="padding:14px 32px;">COMPARE ALL PLANS</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. GIFT CARD SECTION (MATCHING REFERENCE IMAGE 1) -->
+    <section class="t5-sec" id="gift-card" style="padding:40px 0 60px;">
+      <div class="t5-wrap">
+        <div class="t5-gift-container">
+          <!-- Left: 3D Tilt Luxury Velvet Gift Card -->
+          <div class="t5-gift-left-col">
+            <div class="t5-gift-3d-box" id="giftCard3d">
+              <img src="./assets/images/gift-card-velvet.webp" alt="The Digital Yes Gift Card" class="t5-gift-img" />
+            </div>
+            <div class="t5-gift-hint">MOVE YOUR CURSOR OVER THE CARD</div>
+          </div>
+
+          <!-- Right: Information & Selectable Stacked Rows -->
+          <div class="t5-gift-right-col">
+            <div class="t5-gift-tag">GIFT CARD</div>
+            <h2 class="t5-gift-title">
+              Want to give an<br />unforgettable gift?
+            </h2>
+            <p class="t5-gift-desc">
+              Gift their Save the Date, their invitation or atelier credit. The couple choose their design whenever they like with their own code.
+            </p>
+
+            <!-- 4 Selectable Stacked Rows -->
+            <div class="t5-gift-rows">
+              <div class="t5-gift-row" onclick="selectGiftOption(this, '75')">
+                <span class="t5-gift-row-name">Full Save the Date</span>
+                <span class="t5-gift-row-price">€75</span>
+              </div>
+              <div class="t5-gift-row active" onclick="selectGiftOption(this, '175')">
+                <span class="t5-gift-row-name">Full Essential invitation</span>
+                <span class="t5-gift-row-price">€175</span>
+              </div>
+              <div class="t5-gift-row" onclick="selectGiftOption(this, '575')">
+                <span class="t5-gift-row-name">Full Premium invitation</span>
+                <span class="t5-gift-row-price">€575</span>
+              </div>
+              <div class="t5-gift-row" onclick="selectGiftOption(this, '50+')">
+                <span class="t5-gift-row-name">Custom amount</span>
+                <span class="t5-gift-row-price">€50+</span>
+              </div>
+            </div>
+
+            <!-- Action CTA Button -->
+            <div>
+              <button class="t5-gift-cta-btn" id="giftCtaBtn" onclick="alert('Proceeding with Gift Card order!')">
+                <span style="font-size:13px; margin-right:4px;">🛍️</span> GIVE THIS CARD · €175
+              </button>
+            </div>
+            <div class="t5-gift-subnote">
+              You instantly receive the code, the link and the card to send on WhatsApp or print.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. YOU'LL LOVE IT GUARANTEE & EDITORIAL CONTENT -->
+    <section class="t5-sec" style="padding-top:40px;">
+      <div class="t5-wrap">
+        <div class="t5-guarantee-banner">
+          <div style="font-size:32px; color:#D69E58;">⚜️</div>
+          <div>
+            <h3 style="font-family:'Playfair Display',serif; font-size:24px; color:#511317; margin:0 0 6px;">You'll love it. Guaranteed.</h3>
+            <p style="color:#59262F; font-size:14px; line-height:1.6; margin:0;">
+              We work on your design with unlimited revisions until every single detail meets your vision. If you aren't completely delighted with your initial draft, we offer a 100% money-back guarantee.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4-Column Editorial -->
+        <div style="margin-top:60px;">
+          <div class="t5-sh"><span>THE DIGITAL YES EDITORIAL</span><span>DESIGNED FOR YOU BY HAND</span></div>
+          <div class="t5-editorial-grid">
+            <div>
+              <h4 class="t5-editorial-title">Artisanal Craft</h4>
+              <p class="t5-editorial-desc">Every invitation is individually illustrated, animated, and typeset by real fine artists—never generic automated template software.</p>
+            </div>
+            <div>
+              <h4 class="t5-editorial-title">Zero Waste Luxury</h4>
+              <p class="t5-editorial-desc">Bespoke couture beauty without paper waste, printing delays, shipping damage, or lost postage envelopes.</p>
+            </div>
+            <div>
+              <h4 class="t5-editorial-title">Effortless for Guests</h4>
+              <p class="t5-editorial-desc">Designed for everyone from tech-savvy friends to grandparents. Works on any phone with 1-tap navigation and RSVP.</p>
+            </div>
+            <div>
+              <h4 class="t5-editorial-title">Live Guest RSVP</h4>
+              <p class="t5-editorial-desc">Real-time notifications whenever a guest responds, with organized dietary requirements, attendance counts, and music picks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. FREQUENTLY ASKED QUESTIONS -->
+    <section class="t5-sec">
+      <div class="t5-wrap">
+        <div class="t5-sh"><span>FAQ</span><span>EVERYTHING YOU NEED TO KNOW</span></div>
+        <h2 class="t5-h2">Frequently asked questions.</h2>
+
+        <div class="t5-faq">
+          <details>
+            <summary>How does the creation process work?</summary>
+            <div style="padding:16px 0; color:#59262F; line-height:1.65;">
+              After choosing your design and completing your order, you'll receive access to our intuitive details questionnaire. There, you can upload your wedding photos, ceremony details, venue address, dress code, timeline and chosen music. Our team creates your private draft in 3 to 5 business days.
+            </div>
+          </details>
+
+          <details>
+            <summary>Can we make changes after seeing our draft?</summary>
+            <div style="padding:16px 0; color:#59262F; line-height:1.65;">
+              Yes, absolutely! Every plan includes unlimited revisions to your text, photos, maps, and details until you are 100% delighted with the result.
+            </div>
+          </details>
+
+          <details>
+            <summary>How do our guests access the invitation?</summary>
+            <div style="padding:16px 0; color:#59262F; line-height:1.65;">
+              You receive a private, elegant link that you can share via WhatsApp, SMS, email, or your wedding website. It opens instantly on any smartphone, tablet, or desktop computer without requiring guests to install an app or create an account.
+            </div>
+          </details>
+
+          <details>
+            <summary>Can our invitation be bilingual or in another language?</summary>
+            <div style="padding:16px 0; color:#59262F; line-height:1.65;">
+              Yes! We support every language in the world, including dual-language and multilingual invitations with a clean toggle button for your international guests.
+            </div>
+          </details>
+
+          <details>
+            <summary>How long will our digital invitation stay active online?</summary>
+            <div style="padding:16px 0; color:#59262F; line-height:1.65;">
+              Your invitation remains active for up to 6 months after your wedding date so you and your guests can look back at the photos, timeline, and memories.
+            </div>
+          </details>
+
+          <details>
+            <summary>Is there an expiration date on the Gift Card?</summary>
+            <div style="padding:16px 0; color:#59262F; line-height:1.65;">
+              Our gift cards have no expiration date and can be redeemed whenever the couple is ready to plan their wedding or announce their save the date.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <!-- 14. 37 INTERACTIVE DEMOS SECTION (REAL DEMOS / TAP A NAME TO SEE ITS ENVELOPE) -->
+    <section id="demos" class="t5-sec" style="padding-top:40px;">
+      <div class="t5-wrap">
+        <div class="t5-sh">
+          <span>REAL DEMOS</span>
+          <span>TAP A NAME TO SEE ITS ENVELOPE</span>
+        </div>
+
+        <div class="t5-demos-layout">
+          <!-- Left: Phone Mockup Frame that updates dynamically -->
+          <div class="t5-demo-phone-col">
+            <div class="t5-demo-phone-outer">
+              <div class="t5-demo-phone-screen">
+                <img id="demoPhoneImg" src="./assets/images/maison-des-cygnes-cover-BzlLHLuj.webp" alt="Maison des Cygnes Demo" class="t5-demo-img" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Controls and 37 Pills -->
+          <div class="t5-demo-content-col">
+            <div style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#59262F; opacity:0.8; margin-bottom:8px;">
+              37 INTERACTIVE DEMOS
+            </div>
+            <h2 class="t5-demo-title" id="demoTitle">Maison des Cygnes</h2>
+            <p class="t5-demo-subtitle">
+              Open it on your phone exactly as your guests will: envelope, music, every section and the RSVP.
+            </p>
+
+            <div style="margin-bottom:28px;">
+              <a href="#invitations" id="demoBtn" class="t5-btn" style="background:#511317; color:#fff; border-radius:999px; padding:12px 28px; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; display:inline-flex; align-items:center; gap:8px;">
+                OPEN THE LIVE DEMO →
+              </a>
+            </div>
+
+            <!-- Filter Pills Cloud (37 Items) -->
+            <div class="t5-demo-pills" id="demoPills">
+            <button class="t5-demo-pill active" onclick="selectDemoTheme(this, 'Maison des Cygnes', './assets/images/maison-des-cygnes-cover-BzlLHLuj.webp')">MAISON DES CYGNES</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Romantic', './assets/images/romantic-cover-l77RmkfT.webp')">ROMANTIC</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Lace', './assets/images/theme-lace-mockup-v2.webp')">LACE</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Mother of Pearl', './assets/images/mother-of-pearl-cover.webp')">MOTHER OF PEARL</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Embroidered Garden', './assets/images/theme-embroidered-garden-mockup.png')">EMBROIDERED GARDEN</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'La Finca', './assets/images/theme-finca-mockup-DhpABHKz.webp')">LA FINCA</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Day & Night', './assets/images/theme-daynight-mockup-Db4rWjSu.webp')">DAY & NIGHT</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'La Maison Dorée', './assets/images/theme-maison-doree-mockup-DUH7WrV9.webp')">LA MAISON DORÉE</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Royal', './assets/images/theme-royal-mockup-DdvHLywx.webp')">ROYAL</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Fresco', './assets/images/fresco-cover.webp')">FRESCO</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Bella Vista', './assets/images/theme-bella-vista-mockup.jpg')">BELLA VISTA</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Majestic', './assets/images/embroidered-majestic-envelope.webp')">MAJESTIC</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Bridgerton', './assets/images/theme-bridgerton-mockup.jpg')">BRIDGERTON</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Stained Glass', './assets/images/theme-stained-glass.webp')">STAINED GLASS</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Secret Garden', './assets/images/theme-secret-garden-mockup.jpg')">SECRET GARDEN</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Bloom', './assets/images/theme-bloom-mockup-BAh8szKf.webp')">BLOOM</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Prestige', './assets/images/theme-prestige-mockup-CduqdCKn.webp')">PRESTIGE</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Beach', './assets/images/theme-beach-mockup.webp')">BEACH</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Papercraft', './assets/images/theme-papercraft-mockup.jpg')">PAPERCRAFT</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Teatro', './assets/images/theme-teatro-mockup-RUkJP7uL.webp')">TEATRO</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Rosas', './assets/images/theme-rosas-mockup-CygB_mw1.webp')">ROSAS</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Villa Perlé', './assets/images/theme-villa-perle-mockup-CHWMfpBu.webp')">VILLA PERLÉ</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Cap Blanc', './assets/images/theme-cap-blanc-mockup.jpg')">CAP BLANC</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Eleganza', './assets/images/theme-eleganza-mockup.webp')">ELEGANZA</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Bellagio', './assets/images/theme-bellagio-mockup.webp')">BELLAGIO</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Odette', './assets/images/theme-odette-mockup.jpg')">ODETTE</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Boho', './assets/images/theme-boho-mockup.webp')">BOHO</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Minimal Fun', './assets/images/theme-minimal-fun-mockup.webp')">MINIMAL FUN</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Africa', './assets/images/theme-africa-mockup.webp')">AFRICA</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Editorial', './assets/images/theme-editorial-mockup-9HdxqR3K.webp')">EDITORIAL</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Dolce Vita', './assets/images/theme-dolcevita-mockup-Cjy4fDN1.webp')">DOLCE VITA</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Nautical Edition', './assets/images/theme-nautical-mockup-DS6DZydW.webp')">NAUTICAL EDITION</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Mediterranean', './assets/images/theme-mediterranean-edition-mockup-BMK2tlfF.webp')">MEDITERRANEAN</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Floral', './assets/images/theme-floral-mockup-C6GeaP8n.webp')">FLORAL</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Dulce Amor', './assets/images/theme-rosas-mockup-CygB_mw1.webp')">DULCE AMOR</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Minimalista', './assets/images/theme-minimal-mockup-BUjw7ue8.webp')">MINIMALISTA</button>
+            <button class="t5-demo-pill" onclick="selectDemoTheme(this, 'Aventureros', './assets/images/theme-aventureros-mockup-B1k3kFdA.webp')">AVENTUREROS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. WHO ENJOYS US (REAL COUPLES, REAL INVITATIONS) -->
+    <section class="t5-sec" style="padding-top:40px;">
+      <div class="t5-wrap">
+        <div class="t5-sh" style="display:flex; justify-content:space-between; align-items:center;">
+          <div style="display:flex; gap:32px;">
+            <span>WHO ENJOYS US</span>
+            <span style="display:none; @media(min-width:768px){display:inline;}">REAL COUPLES, REAL INVITATIONS</span>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="t5-carousel-nav" onclick="scrollReels(-1)">‹</button>
+            <button class="t5-carousel-nav" onclick="scrollReels(1)">›</button>
+          </div>
+        </div>
+
+        <div class="t5-reels-row" id="reelsRow">
+          <!-- Reel 1: Victoria & Alex -->
+          <div class="t5-reel-card" onclick="toggleReelAudio(this)">
+            <div class="t5-reel-thumb">
+              <video class="t5-reel-video" src="./assets/videos/reel-1.mp4" autoplay loop muted playsinline preload="auto"></video>
+              <div class="t5-reel-sound-btn" title="Toggle audio">
+                <svg class="t5-icon-muted" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+                <svg class="t5-icon-unmuted" style="display:none;" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              </div>
+            </div>
+            <div class="t5-reel-tag">@VICTORIA&amp;ALEX</div>
+          </div>
+
+          <!-- Reel 2: Carla & David -->
+          <div class="t5-reel-card" onclick="toggleReelAudio(this)">
+            <div class="t5-reel-thumb">
+              <video class="t5-reel-video" src="./assets/videos/reel-2.mp4" autoplay loop muted playsinline preload="auto"></video>
+              <div class="t5-reel-sound-btn" title="Toggle audio">
+                <svg class="t5-icon-muted" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+                <svg class="t5-icon-unmuted" style="display:none;" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              </div>
+            </div>
+            <div class="t5-reel-tag">@CARLA&amp;DAVID</div>
+          </div>
+
+          <!-- Reel 3: Roma & Michael -->
+          <div class="t5-reel-card" onclick="toggleReelAudio(this)">
+            <div class="t5-reel-thumb">
+              <video class="t5-reel-video" src="./assets/videos/reel-3.mp4" autoplay loop muted playsinline preload="auto"></video>
+              <div class="t5-reel-sound-btn" title="Toggle audio">
+                <svg class="t5-icon-muted" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+                <svg class="t5-icon-unmuted" style="display:none;" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              </div>
+            </div>
+            <div class="t5-reel-tag">@ROMA&amp;MICHAEL</div>
+          </div>
+
+          <!-- Reel 4: Elena & Marco -->
+          <div class="t5-reel-card" onclick="toggleReelAudio(this)">
+            <div class="t5-reel-thumb">
+              <video class="t5-reel-video" src="./assets/videos/reel-4.mp4" autoplay loop muted playsinline preload="auto"></video>
+              <div class="t5-reel-sound-btn" title="Toggle audio">
+                <svg class="t5-icon-muted" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+                <svg class="t5-icon-unmuted" style="display:none;" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              </div>
+            </div>
+            <div class="t5-reel-tag">@ELENA&amp;MARCO</div>
+          </div>
+
+          <!-- Reel 5: Isabella & Lucas -->
+          <div class="t5-reel-card" onclick="toggleReelAudio(this)">
+            <div class="t5-reel-thumb">
+              <video class="t5-reel-video" src="./assets/videos/reel-5.mp4" autoplay loop muted playsinline preload="auto"></video>
+              <div class="t5-reel-sound-btn" title="Toggle audio">
+                <svg class="t5-icon-muted" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+                <svg class="t5-icon-unmuted" style="display:none;" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              </div>
+            </div>
+            <div class="t5-reel-tag">@ISABELLA&amp;LUCAS</div>
+          </div>
+
+          <!-- Reel 6: Chloe & Thomas -->
+          <div class="t5-reel-card" onclick="toggleReelAudio(this)">
+            <div class="t5-reel-thumb">
+              <video class="t5-reel-video" src="./assets/videos/reel-6.mp4" autoplay loop muted playsinline preload="auto"></video>
+              <div class="t5-reel-sound-btn" title="Toggle audio">
+                <svg class="t5-icon-muted" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+                <svg class="t5-icon-unmuted" style="display:none;" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              </div>
+            </div>
+            <div class="t5-reel-tag">@CHLOE&amp;THOMAS</div>
+          </div>
+
+          <!-- Reel 7: Mia & Daniel -->
+          <div class="t5-reel-card" onclick="toggleReelAudio(this)">
+            <div class="t5-reel-thumb">
+              <video class="t5-reel-video" src="./assets/videos/reel-7.mp4" autoplay loop muted playsinline preload="auto"></video>
+              <div class="t5-reel-sound-btn" title="Toggle audio">
+                <svg class="t5-icon-muted" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+                <svg class="t5-icon-unmuted" style="display:none;" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              </div>
+            </div>
+            <div class="t5-reel-tag">@MIA&amp;DANIEL</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 16. STUDIO LETTERS (LETTERS TO HELP YOU PLAN YOUR INVITATION) -->
+    <section class="t5-sec" style="padding-top:60px; padding-bottom:80px; border-top:1px solid rgba(89,38,47,0.1);">
+      <div class="t5-wrap">
+        <div class="t5-letters-grid">
+          <!-- Left: Information -->
+          <div>
+            <div style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#59262F; opacity:0.8; margin-bottom:8px;">
+              STUDIO LETTERS
+            </div>
+            <h2 style="font-family:'Playfair Display',serif; font-size:clamp(28px, 3.5vw, 38px); font-weight:400; line-height:1.2; margin:0 0 16px; color:#2B2320;">
+              Letters to help you plan your invitation
+            </h2>
+            <p style="font-size:14px; color:#7A6B65; line-height:1.65; margin-bottom:20px; max-width:48ch;">
+              Real stories, creative inspiration and practical advice from our team. We don't spam: 1 email every two weeks. Read by over 3,000+ couples worldwide.
+            </p>
+            <p style="font-size:12px; color:#8C7E78; margin:0;">
+              No spam, guide is free to read, cancel anytime. <a href="#letters" style="color:#511317; text-decoration:underline;">Read past letters</a>
+            </p>
+          </div>
+
+          <!-- Right: Subscription Form -->
+          <div>
+            <form class="t5-letters-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Studio Letters!');">
+              <div class="t5-form-row">
+                <input type="email" placeholder="Your email..." required class="t5-input" />
+                <select class="t5-select">
+                  <option value="en">English</option>
+                  <option value="es">Español</option>
+                  <option value="fr">Français</option>
+                  <option value="it">Italiano</option>
+                  <option value="de">Deutsch</option>
+                </select>
+              </div>
+
+              <div class="t5-form-row">
+                <input type="text" placeholder="When are you getting married?" class="t5-input" />
+                <select class="t5-select">
+                  <option value="">Not chosen</option>
+                  <option value="bride">Bride</option>
+                  <option value="groom">Groom</option>
+                  <option value="planner">Wedding Planner</option>
+                  <option value="guest">Guest</option>
+                </select>
+              </div>
+
+              <div style="display:flex; gap:10px; align-items:flex-start; margin:16px 0 20px;">
+                <input type="checkbox" id="consentCheck" required style="margin-top:3px; accent-color:#511317;" />
+                <label for="consentCheck" style="font-size:11px; color:#7A6B65; line-height:1.5;">
+                  I'd like to receive The Digital Yes newsletter with letters and advice (1-2 times per month) during the week, free to unsubscribe anytime with 1 click. You can review our policy at the Privacy policy.
+                </label>
+              </div>
+
+              <button type="submit" class="t5-btn" style="width:100%; text-align:center; background:#511317; color:#fff; padding:14px;">
+                SUBSCRIBE
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 17. LUXURY FOOTER (MATCHING IMAGE 1) -->
+  <footer class="t5-footer-luxury">
+    <div class="t5-wrap">
+      <div class="t5-footer-grid">
+        <!-- Brand Info -->
+        <div class="t5-footer-brand">
+          <h3 style="font-family:Montserrat,sans-serif; letter-spacing:0.25em; font-size:15px; margin:0 0 10px; color:#2B2320; font-weight:600;">
+            THE DIGITAL YES
+          </h3>
+          <p style="font-size:13px; color:#7A6B65; line-height:1.6; margin:0 0 20px; max-width:32ch;">
+            Digital wedding invitations, designed by hand.
+          </p>
+          <div style="display:flex; gap:10px;">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="t5-social-pill">
+              <span>IG</span> <strong>126k</strong> <small>followers</small>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="t5-social-pill">
+              <span>TT</span> <strong>85k</strong> <small>followers</small>
+            </a>
+          </div>
+        </div>
+
+        <!-- Collections Column -->
+        <div class="t5-footer-links">
+          <h4>COLLECTIONS</h4>
+          <ul>
+            <li><a href="#invitations">Invitations</a></li>
+            <li><a href="#save-the-dates">Save the Dates</a></li>
+            <li><a href="#plans">Bespoke Invitations</a></li>
+            <li><a href="#demos">All designs</a></li>
+            <li><a href="#atelier">Our Atelier</a></li>
+          </ul>
+        </div>
+
+        <!-- Help Column -->
+        <div class="t5-footer-links">
+          <h4>HELP</h4>
+          <ul>
+            <li><a href="#plans">Pricing</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#samples">Samples</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="mailto:info@thedigitalyes.com">Contact us</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Column -->
+        <div class="t5-footer-links">
+          <h4>LEGAL</h4>
+          <ul>
+            <li><a href="#terms">Terms</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#cookies">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="t5-footer-bottom">
+        <div>© The Digital Yes. All rights reserved. Handcrafted digital stationery.</div>
+        <div style="display:flex; gap:20px;">
+          <span>Language: English</span>
+          <span>Currency: EUR (€)</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- 10. STICKY BOTTOM DOCK -->
+  <div class="t5-bottom-dock">
+    <span>Your invitation, designed by hand</span>
+    <a class="t5-dock-btn" href="#invitations">Start My Invitation</a>
+    <a class="t5-dock-ask" href="#plans">Questions?</a>
+  </div>
+
+  <!-- 11. FLOATING CUPI CHAT WIDGET -->
+  <div class="t5-cupi-toast">
+    <div class="t5-cupi-bubble" id="cupiBubble">
+      <button class="t5-cupi-close" onclick="document.getElementById('cupiBubble').style.display='none'">✕</button>
+      Hi! I'm Cupi. Tell me what you'd like: I'll set up your order right here and handle everything!
+    </div>
+    <div class="t5-cupi-avatar">
+      <img src="./assets/images/logo-cupid-optimized-webp-150w-mgoE6Otp.webp" alt="Cupi" />
+    </div>
+  </div>
+
+  <!-- 12. FOOTER -->
+  
+  <!-- SAVE THE DATE MODAL POPUP (MATCHING REFERENCE IMAGE 2) -->
+  <div class="std-modal-overlay" id="stdModalOverlay" onclick="if(event.target===this) closeStdModal()">
+    <div class="std-modal-box">
+      <!-- Close Button -->
+      <button class="std-modal-close" onclick="closeStdModal()" aria-label="Close modal">✕</button>
+
+      <!-- Modal Header -->
+      <div class="std-modal-header">
+        <span class="std-modal-icon">📅</span>
+        <h3 class="std-modal-title">Save the Date</h3>
+      </div>
+
+      <!-- Step Indicator -->
+      <div class="std-modal-steps">
+        <div class="std-step-num active">1</div>
+        <div class="std-step-line"></div>
+        <div class="std-step-num">2</div>
+      </div>
+
+      <!-- Heading & Note -->
+      <h4 class="std-modal-heading">Choose your template</h4>
+      <p class="std-modal-sub">
+        From €135, includes custom animation or illustration, names, music, envelope, wedding date and venue.
+      </p>
+      <p class="std-modal-note">
+        Does not include RSVP. RSVP is only included with wedding invitations.
+      </p>
+
+      <!-- Selected Template Card / Box -->
+      <div class="std-selected-box">
+        <div>
+          <strong id="stdModalTemplateName" style="display:block; font-size:14px; color:#2B2320; margin-bottom:2px;">Custom</strong>
+          <span id="stdModalTemplatePrice" style="font-size:13px; color:#7A6B65;">€135</span>
+        </div>
+        <button type="button" class="std-change-btn" onclick="closeStdModal()">CHANGE</button>
+      </div>
+
+      <!-- Form Grid -->
+      <form class="std-modal-form" onsubmit="event.preventDefault(); alert('Save the Date details submitted successfully!'); closeStdModal();">
+        <div class="std-form-grid">
+          <div>
+            <label class="std-label">First partner's name *</label>
+            <input type="text" required placeholder="E.g. Mary" class="std-input" />
+          </div>
+          <div>
+            <label class="std-label">Second partner's name *</label>
+            <input type="text" required placeholder="E.g. John" class="std-input" />
+          </div>
+          <div>
+            <label class="std-label">Wedding date *</label>
+            <input type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required placeholder="dd.mm.yyyy" class="std-input" />
+          </div>
+          <div>
+            <label class="std-label">Venue (optional)</label>
+            <input type="text" placeholder="E.g. The Grand Estate, New York" class="std-input" />
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="std-continue-btn">
+          CONTINUE
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>

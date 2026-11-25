@@ -11,14 +11,17 @@
   <style>
     /* Exact visual matching refinements */
     html {
+      overflow-x: clip !important;
       overflow-y: scroll !important;
       scroll-behavior: smooth !important;
     }
     body {
-      overflow: visible !important;
+      overflow-x: clip !important;
+      overflow-y: visible !important;
+      max-width: 100%;
     }
     .t5 {
-      overflow: visible !important;
+      overflow-x: clip !important;
     }
 
     /* Fixed top Announcement bar in wine color */
@@ -70,6 +73,40 @@
       display: flex !important;
       align-items: center;
       gap: 24px;
+    }
+    @media (max-width: 980px) {
+      .t5 .t5-nav {
+        display: none !important;
+      }
+      .t5 .t5-hdr-in {
+        padding: 0 14px;
+        min-height: 60px;
+      }
+      .t5 .t5-logo {
+        font-size: 12.5px !important;
+        letter-spacing: 0.2em !important;
+        white-space: nowrap;
+      }
+    }
+    @media (max-width: 480px) {
+      .t5 .t5-ann {
+        padding: 8px 12px;
+        font-size: 11px;
+        line-height: 1.4;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .t5 .t5-logo {
+        font-size: 11px !important;
+        letter-spacing: 0.15em !important;
+      }
+      .t5-buy-btn {
+        padding: 0 14px !important;
+        min-height: 34px !important;
+        font-size: 10px !important;
+        letter-spacing: 0.1em !important;
+      }
     }
     .t5 .t5-nav a, .t5-hdr-r .t5-lnk {
       font-family: Montserrat, sans-serif;
@@ -125,6 +162,8 @@
       letter-spacing: 0.16em !important;
       text-transform: uppercase;
       text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
       box-shadow: 0 10px 24px -10px rgba(92, 26, 34, 0.6);
       transition: all 0.2s ease;
     }
@@ -144,6 +183,20 @@
       font-size: clamp(48px, 6vw, 76px) !important;
       line-height: 1.05 !important;
       color: #2B2320 !important;
+    }
+    @media (max-width: 960px) {
+      .t5 .t5-hero-card {
+        min-height: auto !important;
+      }
+      .t5 .t5-hero-h {
+        font-size: clamp(32px, 8.5vw, 50px) !important;
+        line-height: 1.08 !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .t5 .t5-hero-h {
+        font-size: clamp(28px, 8.5vw, 38px) !important;
+      }
     }
     .t5-hero-sub {
       font-size: 16px;
@@ -261,13 +314,74 @@
       font-size: 12.5px;
       padding-right: 6px;
     }
+    @media (max-width: 768px) {
+      .t5-bottom-dock {
+        bottom: 12px;
+        width: calc(100% - 24px);
+        max-width: 400px;
+        padding: 6px 8px 6px 14px;
+        gap: 10px;
+        justify-content: space-between;
+      }
+      .t5-dock-btn {
+        padding: 9px 15px;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        flex-shrink: 0;
+      }
+      .t5-cupi-toast {
+        right: 12px;
+        bottom: 72px;
+        gap: 8px;
+      }
+      .t5-cupi-avatar {
+        width: 46px;
+        height: 46px;
+        flex-shrink: 0;
+      }
+      .t5-cupi-bubble {
+        max-width: min(215px, calc(100vw - 84px));
+        padding: 10px 22px 10px 14px;
+        font-size: 12px;
+        line-height: 1.45;
+      }
+    }
+    @media (max-width: 640px) {
+      .t5-bottom-dock > span {
+        display: none;
+      }
+      .t5-bottom-dock {
+        width: auto;
+        max-width: calc(100% - 24px);
+        padding: 6px 12px 6px 8px;
+        gap: 12px;
+      }
+    }
   
-    /* EXACT 4 IN ONE ROW FOR WEDDING INVITATIONS GRID */
+    /* EXACT 4 IN ONE ROW FOR WEDDING INVITATIONS GRID (DESKTOP) */
     .wi-grid {
       display: grid !important;
-      grid-template-columns: repeat(4, 1fr) !important;
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
       gap: 30px 20px !important;
       width: 100% !important;
+    }
+    @media (max-width: 1024px) {
+      .wi-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 24px 16px !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .wi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 20px 12px !important;
+      }
+    }
+    @media (max-width: 359px) {
+      .wi-grid {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+      }
     }
     .wi-card {
       width: 100% !important;
@@ -292,6 +406,18 @@
     <!-- 2. NAVBAR -->
     <header class="t5-hdr">
       <div class="t5-hdr-in">
+        <button class="t5-menu-toggle" id="mobileMenuBtn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavMenu">
+          <svg class="t5-icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="1.8" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="t5-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5C1A22" stroke-width="1.8" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
         <a class="t5-logo" href="/" aria-label="The Digital Yes">
           THE DIGITAL YES
         </a>
@@ -310,6 +436,22 @@
           <div class="t5-lang-btn">
             🌐 <span>EN · EUR</span>
           </div>
+          <a class="t5-buy-btn" href="#plans">Buy now</a>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="t5-mobile-menu" id="mobileNavMenu" aria-hidden="true">
+        <nav class="t5-mobile-nav" aria-label="Mobile Navigation">
+          <a href="#invitations">Invitations</a>
+          <a href="#plans">Plans &amp; pricing</a>
+          <a href="#plans">Yes Planner <span class="yp-badge">NEW</span></a>
+          <a href="#save-the-dates">Save the Dates</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#demos">37 Live Demos</a>
+        </nav>
+        <div class="t5-mobile-menu-foot">
+          <div class="t5-lang-btn">🌐 <span>EN · EUR</span></div>
           <a class="t5-buy-btn" href="#plans">Buy now</a>
         </div>
       </div>

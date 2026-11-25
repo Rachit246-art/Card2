@@ -1,6 +1,40 @@
 /* Clean standalone script for The Digital Yes recreation with interactive scroll story */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Mobile Navigation Drawer Toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileNavMenu = document.getElementById('mobileNavMenu');
+
+  function setMobileMenuOpen(isOpen) {
+    if (!mobileMenuBtn || !mobileNavMenu) return;
+    mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+    mobileNavMenu.setAttribute('aria-hidden', String(!isOpen));
+    mobileNavMenu.classList.toggle('is-open', isOpen);
+  }
+
+  if (mobileMenuBtn && mobileNavMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      setMobileMenuOpen(!isOpen);
+    });
+
+    mobileNavMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMobileMenuOpen(false));
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 980) {
+        setMobileMenuOpen(false);
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        setMobileMenuOpen(false);
+      }
+    });
+  }
+
   // 1. Smooth scroll for navigation links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

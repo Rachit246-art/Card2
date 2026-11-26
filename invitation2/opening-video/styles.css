@@ -1,0 +1,122 @@
+:root {
+  --crimson: #6b101c;
+  --cream: #f6ebdc;
+  --gold-light: #f3d778;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #2b070c;
+  color: var(--cream);
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.viewport-stage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+#videoCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.status-badge {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 20;
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(25, 32, 20, 0.74);
+  border: 1px solid rgba(229, 201, 131, 0.45);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream);
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+}
+
+.floating-controls {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.55rem;
+}
+
+.ctrl-btn {
+  padding: 0.6rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 245, 240, 0.35);
+  background: rgba(25, 32, 20, 0.78);
+  color: var(--cream);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.ctrl-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+.ctrl-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ctrl-primary {
+  background: rgba(74, 92, 61, 0.92);
+  border-color: rgba(229, 201, 131, 0.55);
+}
+
+.ctrl-gold {
+  background: linear-gradient(135deg, #d7a542, #a87c28);
+  color: #1c2415;
+  border-color: var(--gold-light);
+}
+
+@media (max-width: 600px) {
+  .status-badge {
+    top: 12px;
+    left: 12px;
+    padding: 0.36rem 0.75rem;
+    font-size: 0.62rem;
+  }
+
+  .floating-controls {
+    bottom: 14px;
+    left: 12px;
+    right: 12px;
+    justify-content: center;
+  }
+
+  .ctrl-btn {
+    padding: 0.52rem 0.85rem;
+    font-size: 0.65rem;
+  }
+}

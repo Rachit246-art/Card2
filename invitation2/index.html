@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zayn &amp; Nora — Royal Grace Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Italianno&family=Lora:ital,wght@0,400..700;1,400..700&family=Marcellus&family=Noto+Sans+Devanagari:wght@400..700&family=Passions+Conflict&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        background-color: #f8f5f0;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        color-scheme: only light;
+      }
+    </style>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Priority 1: Royal Preloader (4.5s) -->
+    <div id="preloader" class="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <p class="preloader-title">Preparing your invitation</p>
+        <div class="preloader-divider">
+          <span class="divider-line left"></span>
+          <span class="divider-gem"></span>
+          <span class="divider-line right"></span>
+        </div>
+        <div class="preloader-dots" aria-label="Loading">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Original Background Audio -->
+    <audio
+      id="bg-music"
+      loop
+      preload="auto"
+      src="./assets/track1.mp3"
+    ></audio>
+
+    <!-- Fixed Floating Controls -->
+    <button
+      id="audio-toggle"
+      class="floating-audio-btn"
+      type="button"
+      aria-label="Toggle background music"
+      title="Toggle Music"
+    >
+      <!-- Muted Icon (default) -->
+      <svg id="icon-muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <line x1="22" y1="9" x2="16" y2="15"></line>
+        <line x1="16" y1="9" x2="22" y2="15"></line>
+      </svg>
+      <!-- Unmuted Icon -->
+      <svg id="icon-unmuted" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+      </svg>
+    </button>
+
+    <button id="lang-toggle" class="floating-lang-btn" type="button">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+      <span id="lang-label">Hindi</span>
+    </button>
+
+    <a
+      href="#rsvp"
+      id="use-design-btn"
+      class="floating-cta-btn"
+    >
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+      </svg>
+      <span data-i18n="useDesign">Use this Design</span>
+    </a>
+
+    <!-- PRIORITY 2 & 3: CRIMSON & SANDSTONE 3D OPENING -> HERO -->
+    <header id="hero" class="hero-section">
+      <canvas
+        id="hero-canvas"
+        class="hero-video"
+        aria-label="Tap to open the wedding invitation"
+      ></canvas>
+
+      <div id="hero-content" class="hero-content is-hidden">
+        <div class="hero-top-ornament hero-anim">
+          <span class="hairline"></span>
+          <span class="heart-icon">♥</span>
+          <span class="hairline"></span>
+        </div>
+
+        <h1 class="hero-names-group">
+          <span class="couple-name hero-anim" data-i18n="groomName">Zayn</span>
+          <span class="couple-subtitle hero-anim">
+            <span data-i18n="groomParent">Son of Mr. &amp; Mrs. Malik</span><br />
+            <span data-i18n="groomDegree">B.E., M.S.</span><br />
+            <span data-i18n="groomRole">Data Scientist</span>
+          </span>
+
+          <span class="couple-ampersand hero-anim">&amp;</span>
+
+          <span class="couple-name hero-anim" data-i18n="brideName">Nora</span>
+          <span class="couple-subtitle hero-anim">
+            <span data-i18n="brideParent">Daughter of Mr. &amp; Mrs. Nasser</span><br />
+            <span data-i18n="brideDegree">MBBS, M.D</span><br />
+            <span data-i18n="brideRole">Pediatrician</span>
+          </span>
+        </h1>
+      </div>
+
+      <a id="scroll-indicator" href="#welcome" class="scroll-indicator is-hidden" aria-label="Scroll to invitation">
+        <span class="scroll-text" data-i18n="scroll">SCROLL</span>
+        <svg class="scroll-chevron" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.25" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
+    </header>
+
+    <!-- PRIORITY 4: COMPLETE INVITATION SECTIONS -->
+    <main class="invitation-main">
+      <!-- Section 2: Welcome Message -->
+      <section id="welcome" class="section-block bg-welcome">
+        <div class="section-container reveal-up">
+          <div class="welcome-divider" aria-hidden="true">
+            <span class="hairline"></span>
+            <span class="heart-icon">♥</span>
+            <span class="hairline"></span>
+          </div>
+          <p class="welcome-quote" data-i18n="welcomeText">
+            We are honored to welcome you to the Wedding ceremony of Zayn &amp; Nora. As they begin their journey together in faith and love,<br />
+            we thank you for being part of this blessed occasion ❤
+          </p>
+          <div class="welcome-divider bottom" aria-hidden="true">
+            <span class="hairline"></span>
+            <span class="heart-icon">♥</span>
+            <span class="hairline"></span>
+          </div>
+
+          <!-- Interaction 1: Shower Petals & Blessings -->
+          <div class="blessing-interactive">
+            <button id="shower-blessings-btn" class="royal-action-btn" type="button">
+              <span aria-hidden="true">✿</span>
+              <span data-i18n="showerBlessings">Shower Blessings &amp; Petals</span>
+            </button>
+            <p class="blessing-count-text">
+              <span id="blessing-count">108</span> <span data-i18n="blessingsSent">blessings showered</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Scratch to Reveal & Save the Date -->
+      <section id="scratch-section" class="section-block bg-general">
+        <div class="section-container reveal-up">
+          <h2 id="scratch-heading" class="section-heading pulse-heading" data-i18n="scratchHeading">Scratch to Reveal</h2>
+          <div class="scratch-divider" aria-hidden="true">
+            <span class="hairline"></span>
+            <span class="heart-icon">♥</span>
+            <span class="hairline"></span>
+          </div>
+
+          <div class="scratch-heart-outer">
+            <svg class="scratch-heart-border" viewBox="0 0 300 272" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <clipPath id="heart-clip" clipPathUnits="objectBoundingBox">
+                  <path d="M 0.5 0.96 C 0.47 0.94, 0.04 0.65, 0.04 0.31 C 0.04 0.13, 0.18 0.03, 0.32 0.03 C 0.42 0.03, 0.48 0.09, 0.5 0.16 C 0.52 0.09, 0.58 0.03, 0.68 0.03 C 0.82 0.03, 0.96 0.13, 0.96 0.31 C 0.96 0.65, 0.53 0.94, 0.5 0.96 Z" />
+                </clipPath>
+              </defs>
+              <path
+                d="M 150 261 C 141 256, 12 177, 12 84 C 12 35, 54 8, 96 8 C 126 8, 144 24, 150 44 C 156 24, 174 8, 204 8 C 246 8, 288 35, 288 84 C 288 177, 159 256, 150 261 Z"
+                stroke="rgba(74, 92, 61, 0.55)"
+                stroke-width="1.5"
+                fill="none"
+              />
+            </svg>
+            <div class="scratch-card-wrapper">
+              <div class="scratch-revealed-content">
+                <span class="scratch-badge" data-i18n="youreInvited">You're Invited!</span>
+                <div class="scratch-date" data-i18n="weddingDate">January 31, 2027</div>
+                <div class="scratch-day" data-i18n="weddingDay">Sunday</div>
+                <div class="scratch-time" data-i18n="weddingTime">10:30 AM</div>
+              </div>
+              <canvas id="scratch-canvas" class="scratch-canvas" width="300" height="272"></canvas>
+            </div>
+          </div>
+
+          <div id="scratch-sparkles" class="scratch-sparkles" aria-hidden="true"></div>
+
+          <div class="save-date-wrapper">
+            <button id="save-date-btn" class="save-date-btn" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span data-i18n="saveTheDate">SAVE THE DATE</span>
+            </button>
+
+            <div id="calendar-dropdown" class="calendar-dropdown hidden" role="menu">
+              <a
+                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Zayn+%26+Nora&dates=20270131T103000Z/20270131T150000Z&location=Grand+Palace+Hall,+City+centre,+London&details=Wedding+Ceremony+of+Zayn+%26+Nora"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="calendar-option"
+              >Google Calendar</a>
+              <a
+                href="https://outlook.office.com/calendar/0/deeplink/compose?subject=Wedding+of+Zayn+%26+Nora&startdt=2027-01-31T10:30:00Z&enddt=2027-01-31T15:00:00Z&location=Grand+Palace+Hall,+City+centre,+London"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="calendar-option"
+              >Office 365 / Outlook</a>
+              <a
+                href="https://calendar.yahoo.com/?v=60&title=Wedding+of+Zayn+%26+Nora&st=20270131T103000Z&et=20270131T150000Z&in_loc=Grand+Palace+Hall,+City+centre,+London"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="calendar-option"
+              >Yahoo Calendar</a>
+              <button type="button" id="download-ics-apple" class="calendar-option">Apple Calendar</button>
+              <button type="button" id="download-ics-other" class="calendar-option">Other (.ics file)</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Photo Carousel -->
+      <section id="gallery" class="section-block bg-general">
+        <div class="section-container reveal-up">
+          <div class="carousel-frame">
+            <div class="carousel-track" id="carousel-track">
+              <div class="carousel-slide">
+                <img src="./assets/slide-1.jpg" alt="Wedding moment 1" loading="lazy" />
+              </div>
+              <div class="carousel-slide">
+                <img src="./assets/slide-2.jpg" alt="Wedding moment 2" loading="lazy" />
+              </div>
+              <div class="carousel-slide">
+                <img src="./assets/slide-3.jpg" alt="Wedding moment 3" loading="lazy" />
+              </div>
+              <div class="carousel-slide">
+                <img src="./assets/slide-4.jpg" alt="Wedding moment 4" loading="lazy" />
+              </div>
+            </div>
+
+            <button class="carousel-btn prev" id="carousel-prev" type="button" aria-label="Previous photo">&#10094;</button>
+            <button class="carousel-btn next" id="carousel-next" type="button" aria-label="Next photo">&#10095;</button>
+
+            <div class="carousel-dots" id="carousel-dots">
+              <button class="carousel-dot active" data-index="0" aria-label="Slide 1"></button>
+              <button class="carousel-dot" data-index="1" aria-label="Slide 2"></button>
+              <button class="carousel-dot" data-index="2" aria-label="Slide 3"></button>
+              <button class="carousel-dot" data-index="3" aria-label="Slide 4"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Countdown -->
+      <section id="countdown" class="section-block bg-general">
+        <div class="section-container reveal-up">
+          <h2 class="section-heading" data-i18n="countdownHeading">Counting Down to Forever</h2>
+          <div class="countdown-grid">
+            <div class="countdown-box">
+              <span class="countdown-num" id="cd-days">00</span>
+              <span class="countdown-label" data-i18n="days">DAYS</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-num" id="cd-hours">00</span>
+              <span class="countdown-label" data-i18n="hours">HOURS</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-num" id="cd-minutes">00</span>
+              <span class="countdown-label" data-i18n="minutes">MINUTES</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-num" id="cd-seconds">00</span>
+              <span class="countdown-label" data-i18n="seconds">SECONDS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Program Timeline -->
+      <section id="timeline" class="section-block bg-general">
+        <div class="section-container reveal-up">
+          <h2 class="section-heading" data-i18n="timelineHeading">Program Timeline</h2>
+
+          <div class="timeline-card">
+            <div class="timeline-day-header" data-i18n="timelineDay1">SUNDAY, JAN 31, 2027</div>
+            <div class="timeline-list">
+              <div class="timeline-item">
+                <div class="timeline-time">10:00 AM</div>
+                <div class="timeline-details">
+                  <h3 data-i18n="guestArrival">Guest Arrival</h3>
+                  <p data-i18n="guestArrivalSub">We welcome you.. ❤</p>
+                  <button type="button" class="attend-chip" data-event="arrival">✦ <span data-i18n="markAttending">Mark Attending</span></button>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-time">10:30 AM</div>
+                <div class="timeline-details">
+                  <h3 data-i18n="weddingCeremony">Wedding Ceremony</h3>
+                  <p data-i18n="weddingCeremonySub">Your presence means a lot!</p>
+                  <button type="button" class="attend-chip" data-event="ceremony">✦ <span data-i18n="markAttending">Mark Attending</span></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-day-header second-day" data-i18n="timelineDay2">TUESDAY, FEB 2, 2027</div>
+            <div class="timeline-list">
+              <div class="timeline-item">
+                <div class="timeline-time">7:30 PM</div>
+                <div class="timeline-details">
+                  <h3 data-i18n="reception">Reception</h3>
+                  <button type="button" class="attend-chip" data-event="reception">✦ <span data-i18n="markAttending">Mark Attending</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Venue -->
+      <section id="venue" class="section-block bg-general">
+        <div class="section-container reveal-up">
+          <h2 class="section-heading" data-i18n="venueHeading">Venue</h2>
+          <p class="venue-title" data-i18n="venueName">Grand Palace Hall</p>
+          <p class="venue-address" data-i18n="venueAddress">City centre, London</p>
+          <div class="map-card">
+            <div class="map-frame">
+              <iframe
+                title="Grand Palace Hall Location"
+                src="https://www.google.com/maps?q=City+of+London,+UK&z=14&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="map-footer-bar">
+              <span class="map-pin-label">✦ <span data-i18n="venueName">Grand Palace Hall</span></span>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Grand+Palace+Hall+London"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="map-directions-btn"
+              >
+                <span data-i18n="getDirections">Get Directions</span> &nearr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Dress Code (Interactive 3D Flip Cards) -->
+      <section id="dress-code" class="section-block bg-general">
+        <div class="section-container reveal-up">
+          <h2 class="section-heading" data-i18n="dressCodeHeading">Dress Code</h2>
+          <p class="interaction-hint" data-i18n="tapCardHint">Tap a card to reveal styling tips</p>
+          <div class="info-cards-grid">
+            <div class="flip-card" tabindex="0" role="button" aria-pressed="false">
+              <div class="flip-card-inner">
+                <div class="info-card flip-front">
+                  <h3 class="info-card-title" data-i18n="women">Women</h3>
+                  <p class="info-card-body" data-i18n="womenDress">Elegant formal attire in pastel or jewel tones</p>
+                </div>
+                <div class="info-card flip-back">
+                  <span class="flip-badge">✦ Royal Tip</span>
+                  <p class="info-card-body" data-i18n="womenTip">Crimson, emerald, antique gold, or soft champagne silk sarees &amp; lehengas</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card" tabindex="0" role="button" aria-pressed="false">
+              <div class="flip-card-inner">
+                <div class="info-card flip-front">
+                  <h3 class="info-card-title" data-i18n="men">Men</h3>
+                  <p class="info-card-body" data-i18n="menDress">Suit or traditional formal wear</p>
+                </div>
+                <div class="info-card flip-back">
+                  <span class="flip-badge">✦ Royal Tip</span>
+                  <p class="info-card-body" data-i18n="menTip">Classic sherwani, bandhgala, or tailored dark suit with a gold pocket square</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9: Pre-Wedding Events (Interactive 3D Flip Cards) -->
+      <section id="pre-wedding" class="section-block bg-general">
+        <div class="section-container reveal-up">
+          <h2 class="section-heading" data-i18n="preWeddingHeading">Pre-Wedding Events</h2>
+          <p class="interaction-hint" data-i18n="tapCardHint">Tap a card to reveal event highlights</p>
+          <div class="info-cards-grid">
+            <div class="flip-card" tabindex="0" role="button" aria-pressed="false">
+              <div class="flip-card-inner">
+                <div class="info-card flip-front">
+                  <div class="event-date-tag">THURSDAY, JAN 28, 2027</div>
+                  <div class="event-time-tag">8:30 PM</div>
+                  <h3 class="info-card-title" data-i18n="mahendi">Mahendi</h3>
+                  <p class="info-card-body" data-i18n="bridesHouse">At Bride's House</p>
+                </div>
+                <div class="info-card flip-back">
+                  <span class="flip-badge">✦ Highlights</span>
+                  <p class="info-card-body" data-i18n="mahendiTip">Bespoke henna artists, live dholak &amp; folk songs, and floral bangles</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card" tabindex="0" role="button" aria-pressed="false">
+              <div class="flip-card-inner">
+                <div class="info-card flip-front">
+                  <div class="event-date-tag">FRIDAY, JAN 29, 2027</div>
+                  <div class="event-time-tag">8:00 PM</div>
+                  <h3 class="info-card-title" data-i18n="haldi">Haldi</h3>
+                  <p class="info-card-body" data-i18n="groomsHouse">At Groom's House</p>
+                </div>
+                <div class="info-card flip-back">
+                  <span class="flip-badge">✦ Highlights</span>
+                  <p class="info-card-body" data-i18n="haldiTip">Marigold petal showers, turmeric blessings, and festive sweets</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10: Transportation -->
+      <section id="transportation" class="section-block bg-general">
+        <div class="section-container reveal-up">
+          <h2 class="section-heading" data-i18n="transportHeading">Transportation</h2>
+          <div class="single-info-card">
+            <p class="info-card-body" data-i18n="transportBody">
+              Shuttle service will be available from the city center to the venue. Pickup point: Central Station at 3:30 PM.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 11: Accommodation -->
+      <section id="accommodation" class="section-block bg-general">
+        <div class="section-container reveal-up">
+          <h2 class="section-heading" data-i18n="accommodationHeading">Accommodation</h2>
+          <div class="single-info-card">
+            <p class="info-card-body" data-i18n="accommodationBody">
+              Special rates at The Grand Palace Hotel (5 min from venue). Use code WEDDING2026 when booking.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 12: Gifts -->
+      <section id="gifts" class="section-block bg-general">
+        <div class="section-container reveal-up">
+          <h2 class="section-heading" data-i18n="giftsHeading">Gifts</h2>
+          <div class="single-info-card">
+            <p class="info-card-body" data-i18n="giftsBody">
+              Your love, blessings, and presence are the greatest gifts we could ever ask for.
+            </p>
+          </div>
+
+          <!-- Interaction: Tap to Light a Sacred Diya -->
+          <div class="diya-ritual-box">
+            <p class="interaction-hint" data-i18n="diyaHint">Tap each diya to light a blessing for Zayn &amp; Nora</p>
+            <div class="diya-row" id="diya-row">
+              <button type="button" class="diya-btn" data-wish="Love">
+                <span class="diya-flame" aria-hidden="true"></span>
+                <span class="diya-bowl">🪔</span>
+                <span class="diya-label">Love</span>
+              </button>
+              <button type="button" class="diya-btn" data-wish="Joy">
+                <span class="diya-flame" aria-hidden="true"></span>
+                <span class="diya-bowl">🪔</span>
+                <span class="diya-label">Joy</span>
+              </button>
+              <button type="button" class="diya-btn" data-wish="Harmony">
+                <span class="diya-flame" aria-hidden="true"></span>
+                <span class="diya-bowl">🪔</span>
+                <span class="diya-label">Harmony</span>
+              </button>
+              <button type="button" class="diya-btn" data-wish="Forever">
+                <span class="diya-flame" aria-hidden="true"></span>
+                <span class="diya-bowl">🪔</span>
+                <span class="diya-label">Forever</span>
+              </button>
+            </div>
+            <p id="diya-status" class="diya-status"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 13: RSVP Form -->
+      <section id="rsvp" class="section-block bg-general">
+        <div class="section-container reveal-up">
+          <h2 class="section-heading" data-i18n="rsvpHeading">RSVP</h2>
+          <form id="rsvp-form" class="rsvp-form" novalidate>
+            <div class="form-group">
+              <label for="rsvp-name">
+                <span data-i18n="yourName">Your Name</span> <span class="required-star">*</span>
+              </label>
+              <input
+                type="text"
+                id="rsvp-name"
+                name="name"
+                placeholder="Your full name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="rsvp-attending">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-2px;margin-right:4px;">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span data-i18n="attendingLabel">Will you be attending?</span> <span class="required-star">*</span>
+              </label>
+              <select id="rsvp-attending" name="attending" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="yes">Yes, I will attend</option>
+                <option value="no">Sorry, I can't make it</option>
+                <option value="maybe">Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvp-message" data-i18n="yourMessage">Your Message</label>
+              <textarea
+                id="rsvp-message"
+                name="message"
+                rows="3"
+                placeholder="Write your wishes..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="rsvp-submit-btn" data-i18n="sendMessage">
+              Send Message
+            </button>
+
+            <div id="rsvp-feedback" class="rsvp-feedback hidden" role="status"></div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Section 14: Closing & Footer -->
+      <footer class="section-block bg-end closing-section">
+        <div class="section-container reveal-up">
+          <div class="wavy-divider" aria-hidden="true">
+            <svg viewBox="0 0 400 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 12 Q 80 2, 150 12 T 290 12 T 390 12" stroke="rgba(74, 92, 61, 0.25)" stroke-width="1" fill="none" />
+              <path d="M50 32 Q 120 22, 190 32 T 350 32" stroke="rgba(74, 92, 61, 0.2)" stroke-width="1" fill="none" />
+              <circle cx="95" cy="21" r="1.5" fill="rgba(74, 92, 61, 0.25)" />
+              <circle cx="205" cy="18" r="1.5" fill="rgba(74, 92, 61, 0.25)" />
+              <circle cx="305" cy="24" r="1.5" fill="rgba(74, 92, 61, 0.25)" />
+            </svg>
+          </div>
+
+          <p class="closing-message" data-i18n="closingMsg">
+            We can't wait to celebrate with you!
+          </p>
+          <div class="closing-names" data-i18n="coupleShort">Zayn &amp; Nora</div>
+
+          <div class="site-footer" role="contentinfo">
+            Create your own Invitation on
+            <span class="footer-brand">Regotz ❤️</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Lightbox Modal for Photo Gallery -->
+    <div id="gallery-lightbox" class="gallery-lightbox hidden" role="dialog" aria-modal="true" aria-label="Photo preview">
+      <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close preview">&times;</button>
+      <button id="lightbox-prev" class="lightbox-nav prev" type="button" aria-label="Previous">&#10094;</button>
+      <img id="lightbox-img" src="" alt="Expanded wedding moment" />
+      <button id="lightbox-next" class="lightbox-nav next" type="button" aria-label="Next">&#10095;</button>
+    </div>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="./hero-opening.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
